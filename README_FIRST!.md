@@ -21,7 +21,7 @@
 ---
 
 
-## General Info  
+## ◀️General Info  
 ### Why the project exists 
  This is a final project for a class. The task is to write and present a full Android Application. The deadline is 7 weeks. 
 ### What is the project 
@@ -41,19 +41,20 @@ This is the list of tasks to have to be compled. The list will be update as need
   | Status | Description | Author | Expected due Date |
   | :---   | :---        | :---              | ---:                    | 
   | &#9745; Done | Set up github and complete README | StephaneK | 3/23/21 |
-  | &#9744; Done  | n/a | n/a | n/a |
-  | &#9744; Done  | n/a | n/a | n/a |
-  | &#9744; Done  | n/a | n/a | n/a |
-  | &#9744; Done  | n/a | n/a | n/a |
-  | &#9744; Done  | n/a | n/a | n/a |
-  | &#9744; Done  | n/a | n/a | n/a |
-
+  | &#9744; Done  | App story board | Tom,Xavier | 3/29/21 |
+  | &#9744; Done  | Project Plan | n/a | 4/2/21 |
+  | &#9744; Done  | Project Update I | n/a | 4/5/21|
+  | &#9744; Done  | Project Update II  | n/a | 4/12/21 |
+  | &#9744; Done  | Project Update III  | n/a | 4/26/21 |
+  | &#9744; Done  | Project Update IV  | n/a | 5/2/21 |
+  | &#9744; Done  | Final Presentation | n/a | 5/13/21 |
+  | &#9744; Done  | Final Project Delivery  | n/a | 5/20/21 |
 
 ---
 
 
-## Expectations from Authors  
-### How to work on the project     
+## ◀️Expectations from Authors  
+### How to work on the project       
  **Important** : 
  - The Master branch has the last FULLY (release ready) functional version of the app. 
  - The testing branch has the the most up to date fully functional (not revised or tested) version of the app. (All three author branches merged into one).
@@ -115,7 +116,7 @@ things are not too attached to their environment
 ---
 
 
-## List of Authors  
+## ◀️List of Authors  
 - Xavier <xavierclarkvt@gmail.com> 
 - Stephane <swar.kung@gmail.com> 
 - Tom <tomknockenhauer@gmail.com>
@@ -124,9 +125,9 @@ things are not too attached to their environment
 ---
 
 
-## License & copyright 
-Education use only, may not be distrubuted for comercial use ty :) 
-© VTC, Vermont Technical College Williston
+## ◀️License & copyright 
+Education use only, may not be distrubuted for non-comercial use only ty :) 
+© VTC, Vermont Technical College Williston 3/24/21 
 
 
 
