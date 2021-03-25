@@ -3,19 +3,19 @@
 >  If you can’t explain it to a six-year-old, you don’t understand it yourself:stuck_out_tongue:. 
  
 #### What is included in the README:  
-1. [General Info](https://github.com/stephaneK123/weatherNotification/blob/Stephane'sBranch/README_FIRST!.md#%EF%B8%8Fgeneral-info)                                                
+1. [General Info](https://github.com/stephaneK123/weatherNotification/blob/Stephane'sBranch/README.md#%EF%B8%8Fgeneral-info)                                                
    - Why the project exists                                        
    - What is the project                                              
    - How the project is meant to be used 
    - Progress                  
-2. [Expetation from Authors](https://github.com/stephaneK123/weatherNotification/blob/Stephane'sBranch/README_FIRST!.md#%EF%B8%8Fexpectations-from-authors)
+2. [Expetation from Authors](https://github.com/stephaneK123/weatherNotification/blob/Stephane'sBranch/README.md#%EF%B8%8Fexpectations-from-authors)
    - How to work on the project  
    - Writing readable code  
    - Communication
    - Testing 
-3. [List of Authors](https://github.com/stephaneK123/weatherNotification/blob/Stephane'sBranch/README_FIRST!.md#%EF%B8%8Flist-of-authors)
+3. [List of Authors](https://github.com/stephaneK123/weatherNotification/blob/Stephane'sBranch/README.md#%EF%B8%8Flist-of-authors)
    - A list of all the authors 😍
-4. [License & copyright](https://github.com/stephaneK123/weatherNotification/blob/Stephane'sBranch/README_FIRST!.md#%EF%B8%8Flicense--copyright) 
+4. [License & copyright](https://github.com/stephaneK123/weatherNotification/blob/Stephane'sBranch/README.md#%EF%B8%8Flicense--copyright) 
    - Typical we will sue if you do this ~~blablahblah~~.
 
 ---
