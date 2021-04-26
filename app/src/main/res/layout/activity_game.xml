@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/_tvLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level :"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <TextView
+        android:id="@+id/_tvHighestScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highest Score : "
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="770dp" />
+
+    <Button
+        android:id="@+id/_btnLeaveGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="ResetScore"
+        android:textSize="8sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/_btnStartGame"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/_btnStartGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textOff="Start Game"
+        android:textOn="Start Game"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/_btnLeaveGame" />
+
+    <stephane.katende.weathernotifications.TapSquare
+        android:id="@+id/_tapSquareCanvas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="208dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_tvLevel,_tvHighestScore"
+        app:flow_maxElementsWrap="1"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.998" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
