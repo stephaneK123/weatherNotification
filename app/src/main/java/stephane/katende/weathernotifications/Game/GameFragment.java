@@ -1,9 +1,11 @@
 package stephane.katende.weathernotifications.Game;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
@@ -25,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
+
 import stephane.katende.weathernotifications.R;
 
 
@@ -44,12 +47,11 @@ public class GameFragment extends Fragment {
     TextView scoreView;
 
 
-    private  class TapSquare2 extends View {
+    private class TapSquare2 extends View {
         private Paint _myPaint;
         private Rect _myRect;
         private android.graphics.Canvas _myCanvas;
         private long _visibleTime, _numOfSquaresCounter;
-
 
 
         private int _canvasHeight, _canvasWidth, _lastTop, _lastLeft, _numberOfSquares, _visibleTimeMultiplier = 20,
@@ -93,14 +95,14 @@ public class GameFragment extends Fragment {
             _btnStatus = 1;
             _btbStarGame.setEnabled(true);
             calculateHighScore();
-            scoreView.setText("HighScore : "+ sharedPreferences.getString(scoreTAG, "0"));
+            scoreView.setText("HighScore : " + sharedPreferences.getString(scoreTAG, "0"));
             triggerRefresh();
             postInvalidate();
         }
 
-        public void calculateHighScore(){
-            String lastScore = String.valueOf(Integer.valueOf(sharedPreferences.getString(scoreTAG, "0")));
-            if(Integer.valueOf(lastScore) < _score)
+        public void calculateHighScore() {
+            String lastScore = sharedPreferences.getString(scoreTAG, "0");
+            if (Integer.valueOf(lastScore) < _score)
                 sharedPreferences.edit().putString(scoreTAG, String.valueOf(_score)).apply();
 
         }
@@ -268,7 +270,6 @@ public class GameFragment extends Fragment {
                     }
                 }
             }
-
         }
 
         public void init(@Nullable AttributeSet set) {
@@ -343,18 +344,18 @@ public class GameFragment extends Fragment {
         tapSquare2 = new TapSquare2(getActivity());
         constraintLayout.addView(tapSquare2, ConstraintLayout.LayoutParams.MATCH_PARENT);
         _btbStarGame = view.findViewById(R.id._btnStartGame);
-       sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
         scoreView = view.findViewById(R.id._tvHighScore);
         return view;
     }
 
     @Override
     public void onResume() {
-        scoreView.setText("HighScore : "+ sharedPreferences.getString(scoreTAG, "0"));
+        scoreView.setText("HighScore : " + sharedPreferences.getString(scoreTAG, "0"));
         super.onResume();
 
         _btbStarGame.setOnClickListener(v -> {
-           playGame();
+            playGame();
 
         });
     }
@@ -364,8 +365,6 @@ public class GameFragment extends Fragment {
         tapSquare2.startGame(userLevel);
 
     }
-
-
 
 
 }

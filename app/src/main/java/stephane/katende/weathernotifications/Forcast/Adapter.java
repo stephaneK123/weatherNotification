@@ -195,8 +195,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             headers[0] = itemView.findViewById(R.id._tvCurrentTemp);
             headers[1] = itemView.findViewById(R.id._tvDate);
             headers[2] = itemView.findViewById(R.id._tvHighLow);
-            headers[3] = itemView.findViewById(R.id._tvContent);
-            headers[4] = itemView.findViewById(R.id._tvLastUpdate);
 
             row[0] = itemView.findViewById(R.id._time);
             row[1] = itemView.findViewById(R.id._temp);
@@ -204,7 +202,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row[3] = itemView.findViewById(R.id._condition);
             row[4] = itemView.findViewById(R.id._wind);
             row[5] = itemView.findViewById(R.id._humidity);
-            row[6] = itemView.findViewById(R.id._uv);
 
             row1[0] = itemView.findViewById(R.id._time4);
             row1[1] = itemView.findViewById(R.id._temp4);
@@ -212,7 +209,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row1[3] = itemView.findViewById(R.id._condition4);
             row1[4] = itemView.findViewById(R.id._wind4);
             row1[5] = itemView.findViewById(R.id._humidity4);
-            row1[6] = itemView.findViewById(R.id._uv4);
 
             row2[0] = itemView.findViewById(R.id._time5);
             row2[1] = itemView.findViewById(R.id._temp5);
@@ -220,7 +216,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row2[3] = itemView.findViewById(R.id._condition5);
             row2[4] = itemView.findViewById(R.id._wind5);
             row2[5] = itemView.findViewById(R.id._humidity5);
-            row2[6] = itemView.findViewById(R.id._uv5);
 
             row3[0] = itemView.findViewById(R.id._time6);
             row3[1] = itemView.findViewById(R.id._temp6);
@@ -228,7 +223,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row3[3] = itemView.findViewById(R.id._condition6);
             row3[4] = itemView.findViewById(R.id._wind6);
             row3[5] = itemView.findViewById(R.id._humidity6);
-            row3[6] = itemView.findViewById(R.id._uv6);
 
             row4[0] = itemView.findViewById(R.id._time7);
             row4[1] = itemView.findViewById(R.id._temp7);
@@ -236,7 +230,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row4[3] = itemView.findViewById(R.id._condition7);
             row4[4] = itemView.findViewById(R.id._wind7);
             row4[5] = itemView.findViewById(R.id._humidity7);
-            row4[6] = itemView.findViewById(R.id._uv7);
 
             row5[0] = itemView.findViewById(R.id._time8);
             row5[1] = itemView.findViewById(R.id._temp8);
@@ -244,7 +237,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row5[3] = itemView.findViewById(R.id._condition8);
             row5[4] = itemView.findViewById(R.id._wind8);
             row5[5] = itemView.findViewById(R.id._humidity8);
-            row5[6] = itemView.findViewById(R.id._uv8);
 
             row6[0] = itemView.findViewById(R.id._time9);
             row6[1] = itemView.findViewById(R.id._temp9);
@@ -252,7 +244,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row6[3] = itemView.findViewById(R.id._condition9);
             row6[4] = itemView.findViewById(R.id._wind9);
             row6[5] = itemView.findViewById(R.id._humidity9);
-            row6[6] = itemView.findViewById(R.id._uv9);
 
             row7[0] = itemView.findViewById(R.id._time10);
             row7[1] = itemView.findViewById(R.id._temp10);
@@ -260,7 +251,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row7[3] = itemView.findViewById(R.id._condition10);
             row7[4] = itemView.findViewById(R.id._wind10);
             row7[5] = itemView.findViewById(R.id._humidity10);
-            row7[6] = itemView.findViewById(R.id._uv10);
 
             row8[0] = itemView.findViewById(R.id._time11);
             row8[1] = itemView.findViewById(R.id._temp11);
@@ -268,7 +258,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row8[3] = itemView.findViewById(R.id._condition11);
             row8[4] = itemView.findViewById(R.id._wind11);
             row8[5] = itemView.findViewById(R.id._humidity11);
-            row8[6] = itemView.findViewById(R.id._uv11);
 
             row9[0] = itemView.findViewById(R.id._time12);
             row9[1] = itemView.findViewById(R.id._temp12);
@@ -276,7 +265,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row9[3] = itemView.findViewById(R.id._condition12);
             row9[4] = itemView.findViewById(R.id._wind12);
             row9[5] = itemView.findViewById(R.id._humidity12);
-            row9[6] = itemView.findViewById(R.id._uv12);
 
             row10[0] = itemView.findViewById(R.id._time13);
             row10[1] = itemView.findViewById(R.id._temp13);
@@ -284,7 +272,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row10[3] = itemView.findViewById(R.id._condition13);
             row10[4] = itemView.findViewById(R.id._wind13);
             row10[5] = itemView.findViewById(R.id._humidity13);
-            row10[6] = itemView.findViewById(R.id._uv13);
 
             row11[0] = itemView.findViewById(R.id._time14);
             row11[1] = itemView.findViewById(R.id._temp14);
@@ -292,7 +279,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row11[3] = itemView.findViewById(R.id._condition14);
             row11[4] = itemView.findViewById(R.id._wind14);
             row11[5] = itemView.findViewById(R.id._humidity14);
-            row11[6] = itemView.findViewById(R.id._uv14);
 
             row12[0] = itemView.findViewById(R.id._time15);
             row12[1] = itemView.findViewById(R.id._temp15);
@@ -300,9 +286,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             row12[3] = itemView.findViewById(R.id._condition15);
             row12[4] = itemView.findViewById(R.id._wind15);
             row12[5] = itemView.findViewById(R.id._humidity15);
-            row12[6] = itemView.findViewById(R.id._uv15);
-
-
         }
     }
 

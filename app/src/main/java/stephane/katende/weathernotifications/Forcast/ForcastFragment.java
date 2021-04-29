@@ -144,7 +144,7 @@ public class ForcastFragment extends Fragment {
         one.setCondition("Rainy");
         one.setWind("10 mph");
         one.setHumidity("55%");
-        one.setUv("2/10");
+
 
         ForecastViewHelper.SecondRow two = dayOne.get_mySecondRow();
         two.setTemp("45");
@@ -152,7 +152,7 @@ public class ForcastFragment extends Fragment {
         two.setCondition("Rainy");
         two.setWind("10 mph");
         two.setHumidity("55%");
-        two.setUv("2/10");
+
 
         ForecastViewHelper.ThirdRow three = dayOne.get_myThirdRow();
         three.setTemp("45");
@@ -160,7 +160,7 @@ public class ForcastFragment extends Fragment {
         three.setCondition("Rainy");
         three.setWind("10 mph");
         three.setHumidity("55%");
-        three.setUv("2/10");
+
 
         ForecastViewHelper.FourthRow four = dayOne.get_myFourthRow();
         four.setTemp("45");
@@ -168,7 +168,7 @@ public class ForcastFragment extends Fragment {
         four.setCondition("Rainy");
         four.setWind("10 mph");
         four.setHumidity("55%");
-        four.setUv("2/10");
+
 
         ForecastViewHelper.FifthRow five = dayOne.get_myFifthRow();
         five.setTemp("45");
@@ -176,7 +176,7 @@ public class ForcastFragment extends Fragment {
         five.setCondition("Rainy");
         five.setWind("10 mph");
         five.setHumidity("55%");
-        five.setUv("2/10");
+
 
         ForecastViewHelper.SixthRow six = dayOne.get_mySixthRow();
         six.setTemp("45");
@@ -184,7 +184,7 @@ public class ForcastFragment extends Fragment {
         six.setCondition("Rainy");
         six.setWind("10 mph");
         six.setHumidity("55%");
-        six.setUv("2/10");
+
 
         ForecastViewHelper.SeventhRow seven = dayOne.get_mySeventhRow();
         seven.setTemp("45");
@@ -192,7 +192,7 @@ public class ForcastFragment extends Fragment {
         seven.setCondition("Rainy");
         seven.setWind("10 mph");
         seven.setHumidity("55%");
-        seven.setUv("2/10");
+
 
         ForecastViewHelper.EighthRow eight = dayOne.get_myEightRow();
         eight.setTemp("45");
@@ -200,7 +200,7 @@ public class ForcastFragment extends Fragment {
         eight.setCondition("Rainy");
         eight.setWind("10 mph");
         eight.setHumidity("55%");
-        eight.setUv("2/10");
+
 
         ForecastViewHelper.NinthRow nine = dayOne.get_myNinthRow();
         nine.setTemp("45");
@@ -208,7 +208,7 @@ public class ForcastFragment extends Fragment {
         nine.setCondition("Rainy");
         nine.setWind("10 mph");
         nine.setHumidity("55%");
-        nine.setUv("2/10");
+
 
         ForecastViewHelper.TenthRow ten = dayOne.get_myTenthRow();
         ten.setTemp("45");
@@ -216,7 +216,7 @@ public class ForcastFragment extends Fragment {
         ten.setCondition("Rainy");
         ten.setWind("10 mph");
         ten.setHumidity("55%");
-        ten.setUv("2/10");
+
 
         ForecastViewHelper.EleventhRow eleven = dayOne.get_myEleventhRow();
         eleven.setTemp("45");
@@ -224,7 +224,7 @@ public class ForcastFragment extends Fragment {
         eleven.setCondition("Rainy");
         eleven.setWind("10 mph");
         eleven.setHumidity("55%");
-        eleven.setUv("2/10");
+
 
 
         ForecastViewHelper.TwelfthRow twelve = dayOne.get_myTwelfthRow();
@@ -233,7 +233,7 @@ public class ForcastFragment extends Fragment {
         twelve.setCondition("Rainy");
         twelve.setWind("10 mph");
         twelve.setHumidity("55%");
-        twelve.setUv("2/10");
+
 
 
         //random data

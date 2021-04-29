@@ -71,16 +71,6 @@
         tools:layout_editor_absoluteX="206dp"
         tools:layout_editor_absoluteY="869dp" />
 
-    <TextView
-        android:id="@+id/_uv15"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
 
     <TextView
         android:id="@+id/_time13"
@@ -148,16 +138,6 @@
         tools:layout_editor_absoluteX="206dp"
         tools:layout_editor_absoluteY="869dp" />
 
-    <TextView
-        android:id="@+id/_uv13"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
 
     <TextView
         android:id="@+id/_time12"
@@ -225,16 +205,7 @@
         tools:layout_editor_absoluteX="206dp"
         tools:layout_editor_absoluteY="869dp" />
 
-    <TextView
-        android:id="@+id/_uv12"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+
 
     <TextView
         android:id="@+id/_time11"
@@ -303,17 +274,6 @@
         tools:layout_editor_absoluteY="869dp" />
 
     <TextView
-        android:id="@+id/_uv11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
         android:id="@+id/_time10"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -359,17 +319,6 @@
 
     <TextView
         android:id="@+id/_wind10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_uv14"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/karantina_light"
@@ -457,17 +406,6 @@
         tools:layout_editor_absoluteY="869dp" />
 
     <TextView
-        android:id="@+id/_uv10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
         android:id="@+id/_time9"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -524,17 +462,6 @@
 
     <TextView
         android:id="@+id/_humidity9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_uv9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/karantina_light"
@@ -611,17 +538,6 @@
         tools:layout_editor_absoluteY="869dp" />
 
     <TextView
-        android:id="@+id/_uv8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
         android:id="@+id/_time7"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -678,17 +594,6 @@
 
     <TextView
         android:id="@+id/_humidity7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_uv7"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/karantina_light"
@@ -765,17 +670,6 @@
         tools:layout_editor_absoluteY="869dp" />
 
     <TextView
-        android:id="@+id/_uv6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
         android:id="@+id/_time5"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -832,17 +726,6 @@
 
     <TextView
         android:id="@+id/_humidity5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_uv5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/karantina_light"
@@ -919,17 +802,6 @@
         tools:layout_editor_absoluteY="869dp" />
 
     <TextView
-        android:id="@+id/_uv4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
         android:id="@+id/_time"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -996,17 +868,6 @@
         tools:layout_editor_absoluteY="869dp" />
 
     <TextView
-        android:id="@+id/_uv"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
         android:id="@+id/_tvCurrentTemp"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -1026,13 +887,6 @@
         tools:layout_editor_absoluteY="30dp" />
 
     <TextView
-        android:id="@+id/_tvContent"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="21dp" />
-
-    <TextView
         android:id="@+id/_tvHighLow"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -1040,20 +894,12 @@
         tools:layout_editor_absoluteX="53dp"
         tools:layout_editor_absoluteY="90dp" />
 
-    <TextView
-        android:id="@+id/_tvLastUpdate"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="111dp" />
-
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow6"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:constraint_referenced_ids="_tvCurrentTemp,_tvHighLow,_tvLastUpdate"
+        app:constraint_referenced_ids="_tvCurrentTemp,_tvHighLow"
 
         app:flow_verticalAlign="bottom"
         app:flow_verticalGap="2dp"
@@ -1071,7 +917,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:constraint_referenced_ids="_tvDate,_tvContent"
+        app:constraint_referenced_ids="_tvDate"
         app:flow_horizontalStyle="packed"
         app:flow_verticalGap="2sp"
         app:layout_constraintBottom_toTopOf="@id/master"
@@ -1085,7 +931,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time,_temp,_feels,_condition,_wind,_humidity,_uv"
+        app:constraint_referenced_ids="_time,_temp,_feels,_condition,_wind,_humidity"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1097,7 +943,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time4,_temp4,_feels4,_condition4,_wind4,_humidity4,_uv4"
+        app:constraint_referenced_ids="_time4,_temp4,_feels4,_condition4,_wind4,_humidity4"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1109,7 +955,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time5,_temp5,_feels5,_condition5,_wind5,_humidity5,_uv5"
+        app:constraint_referenced_ids="_time5,_temp5,_feels5,_condition5,_wind5,_humidity5"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1121,7 +967,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time6,_temp6,_feels6,_condition6,_wind6,_humidity6,_uv6"
+        app:constraint_referenced_ids="_time6,_temp6,_feels6,_condition6,_wind6,_humidity6"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1133,7 +979,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time7,_temp7,_feels7,_condition7,_wind7,_humidity7,_uv7"
+        app:constraint_referenced_ids="_time7,_temp7,_feels7,_condition7,_wind7,_humidity7"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1145,7 +991,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time8,_temp8,_feels8,_condition8,_wind8,_humidity8,_uv8"
+        app:constraint_referenced_ids="_time8,_temp8,_feels8,_condition8,_wind8,_humidity8"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1157,19 +1003,31 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time9,_temp9,_feels9,_condition9,_wind9,_humidity9,_uv9"
+        app:constraint_referenced_ids="_time9,_temp9,_feels9,_condition9,_wind9,_humidity9"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
         tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        tools:layout_editor_absoluteY="869dp">
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/master"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:constraint_referenced_ids="flow4,hour1,hour2,hour3,hour4,hour5,hour6,hour7,hour8,hour9,hour10,hour11,hour12"
+            app:flow_verticalAlign="bottom"
+
+            app:flow_verticalStyle="packed"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.helper.widget.Flow>
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/hour7"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time10,_temp10,_feels10,_condition10,_wind10,_humidity10,_uv10"
+        app:constraint_referenced_ids="_time10,_temp10,_feels10,_condition10,_wind10,_humidity10"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1181,7 +1039,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time11,_temp11,_feels11,_condition11,_wind11,_humidity11,_uv11"
+        app:constraint_referenced_ids="_time11,_temp11,_feels11,_condition11,_wind11,_humidity11"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1193,7 +1051,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time12,_temp12,_feels12,_condition12,_wind12,_humidity12,_uv12"
+        app:constraint_referenced_ids="_time12,_temp12,_feels12,_condition12,_wind12,_humidity12"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1205,7 +1063,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time13,_temp13,_feels13,_condition13,_wind13,_humidity13,_uv13"
+        app:constraint_referenced_ids="_time13,_temp13,_feels13,_condition13,_wind13,_humidity13"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1217,7 +1075,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time14,_temp14,_feels14,_condition14,_wind14,_humidity14,_uv14"
+        app:constraint_referenced_ids="_time14,_temp14,_feels14,_condition14,_wind14,_humidity14"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
@@ -1229,27 +1087,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time15,_temp15,_feels15,_condition15,_wind15,_humidity15,_uv15"
+        app:constraint_referenced_ids="_time15,_temp15,_feels15,_condition15,_wind15,_humidity15"
         app:flow_horizontalAlign="start"
         app:flow_horizontalStyle="packed"
         app:flow_wrapMode="none"
         tools:layout_editor_absoluteX="206dp"
         tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/master"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:constraint_referenced_ids="flow4,hour1,hour2,hour3,hour4,hour5,hour6,hour7,hour8,hour9,hour10,hour11,hour12"
-        app:flow_verticalAlign="bottom"
-
-        app:flow_verticalStyle="packed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Flow2"
-        app:layout_constraintVertical_weight="0.80"
-        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

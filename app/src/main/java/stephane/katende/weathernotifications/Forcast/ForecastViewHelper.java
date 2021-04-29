@@ -1,15 +1,12 @@
 package stephane.katende.weathernotifications.Forcast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public final class ForecastViewHelper {
-    String[] _headers = new String[5], _row = new String[7], _row1 = new String[7],
-            _row2 = new String[7], _row3 = new String[7], _row4 = new String[7],
-            _row5 = new String[7], _row6 = new String[7], _row7 = new String[7],
-            _row8 = new String[7], _row9 = new String[7], _row10 = new String[7],
-            _row11 = new String[7], _row12 = new String[7];
-
+    String[] _headers = new String[5], _row = new String[6], _row1 = new String[6],
+            _row2 = new String[6], _row3 = new String[6], _row4 = new String[6],
+            _row5 = new String[6], _row6 = new String[6], _row7 = new String[6],
+            _row8 = new String[6], _row9 = new String[6], _row10 = new String[6],
+            _row11 = new String[6], _row12 = new String[6];
 
     private ForecastViewHelper.Headers _myHeaders = new Headers();
     private ForecastViewHelper.Row _myRow = new Row();
@@ -90,7 +87,6 @@ public final class ForecastViewHelper {
         _row[3] = "Condition";
         _row[4] = "Wind";
         _row[5] = "Humidity";
-        _row[6] = "U/V";
 
         _row1[0] = "12am";
         _row2[0] = "2am";
@@ -104,8 +100,6 @@ public final class ForecastViewHelper {
         _row10[0] = "6pm";
         _row11[0] = "8pm";
         _row12[0] = "11pm";
-
-
     }
 
 
@@ -114,7 +108,6 @@ public final class ForecastViewHelper {
         for (int i = 1; i < _headers.length; i++) {
             _headers[i] = "0";
         }
-
         //rows
         for (int i = 1; i < _row.length; i++) {
             _row1[i] = "test";
@@ -190,7 +183,6 @@ public final class ForecastViewHelper {
 
 
     public abstract class Rows {
-
         public abstract void setTemp(String temp);
 
         public abstract void setFeelsLike(String feelsLike);
@@ -201,8 +193,6 @@ public final class ForecastViewHelper {
 
         public abstract void setHumidity(String humidity);
 
-        public abstract void setUv(String uv);
-
         public abstract String getTemp();
 
         public abstract String getFeelsLike();
@@ -212,9 +202,6 @@ public final class ForecastViewHelper {
         public abstract String getWind();
 
         public abstract String getHumidity();
-
-        public abstract String getUv();
-
     }
 
     public class Headers {
@@ -273,32 +260,22 @@ public final class ForecastViewHelper {
 
         @Override
         public void setTemp(String temp) {
-
         }
 
         @Override
         public void setFeelsLike(String feelsLike) {
-
         }
 
         @Override
         public void setCondition(String condition) {
-
         }
 
         @Override
         public void setWind(String windSpeed) {
-
         }
 
         @Override
         public void setHumidity(String humidity) {
-
-        }
-
-        @Override
-        public void setUv(String uv) {
-
         }
 
         @Override
@@ -323,11 +300,6 @@ public final class ForecastViewHelper {
 
         @Override
         public String getHumidity() {
-            return null;
-        }
-
-        @Override
-        public String getUv() {
             return null;
         }
     }
@@ -363,11 +335,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row1[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row1[1];
         }
@@ -392,10 +359,6 @@ public final class ForecastViewHelper {
             return _row1[5];
         }
 
-        @Override
-        public String getUv() {
-            return _row1[6];
-        }
     }
 
     public class SecondRow extends Rows {
@@ -429,11 +392,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row2[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row2[1];
         }
@@ -458,10 +416,6 @@ public final class ForecastViewHelper {
             return _row2[5];
         }
 
-        @Override
-        public String getUv() {
-            return _row2[6];
-        }
     }
 
     public class ThirdRow extends Rows {
@@ -495,11 +449,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row3[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row3[1];
         }
@@ -524,10 +473,6 @@ public final class ForecastViewHelper {
             return _row3[5];
         }
 
-        @Override
-        public String getUv() {
-            return _row3[6];
-        }
     }
 
 
@@ -562,11 +507,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row4[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row4[1];
         }
@@ -591,10 +531,6 @@ public final class ForecastViewHelper {
             return _row4[5];
         }
 
-        @Override
-        public String getUv() {
-            return _row4[6];
-        }
     }
 
     public class FifthRow extends Rows {
@@ -628,11 +564,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row5[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row5[1];
         }
@@ -657,10 +588,6 @@ public final class ForecastViewHelper {
             return _row5[5];
         }
 
-        @Override
-        public String getUv() {
-            return _row5[6];
-        }
     }
 
     public class SixthRow extends Rows {
@@ -694,11 +621,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row6[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row6[1];
         }
@@ -721,11 +643,6 @@ public final class ForecastViewHelper {
         @Override
         public String getHumidity() {
             return _row6[5];
-        }
-
-        @Override
-        public String getUv() {
-            return _row6[6];
         }
     }
 
@@ -760,11 +677,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row7[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row7[1];
         }
@@ -789,10 +701,6 @@ public final class ForecastViewHelper {
             return _row7[5];
         }
 
-        @Override
-        public String getUv() {
-            return _row7[6];
-        }
     }
 
     public class EighthRow extends Rows {
@@ -826,11 +734,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row8[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row8[1];
         }
@@ -855,10 +758,6 @@ public final class ForecastViewHelper {
             return _row8[5];
         }
 
-        @Override
-        public String getUv() {
-            return _row8[6];
-        }
     }
 
     public class NinthRow extends Rows {
@@ -892,11 +791,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row9[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row9[1];
         }
@@ -919,11 +813,6 @@ public final class ForecastViewHelper {
         @Override
         public String getHumidity() {
             return _row9[5];
-        }
-
-        @Override
-        public String getUv() {
-            return _row9[6];
         }
     }
 
@@ -958,11 +847,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row10[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row10[1];
         }
@@ -985,11 +869,6 @@ public final class ForecastViewHelper {
         @Override
         public String getHumidity() {
             return _row10[5];
-        }
-
-        @Override
-        public String getUv() {
-            return _row10[6];
         }
     }
 
@@ -1024,11 +903,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row11[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row11[1];
         }
@@ -1051,11 +925,6 @@ public final class ForecastViewHelper {
         @Override
         public String getHumidity() {
             return _row11[5];
-        }
-
-        @Override
-        public String getUv() {
-            return _row11[6];
         }
     }
 
@@ -1090,11 +959,6 @@ public final class ForecastViewHelper {
         }
 
         @Override
-        public void setUv(String uv) {
-            _row12[6] = uv;
-        }
-
-        @Override
         public String getTemp() {
             return _row12[1];
         }
@@ -1118,12 +982,5 @@ public final class ForecastViewHelper {
         public String getHumidity() {
             return _row12[5];
         }
-
-        @Override
-        public String getUv() {
-            return _row12[6];
-        }
     }
-
-
 }
