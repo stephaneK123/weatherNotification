@@ -1,4 +1,4 @@
-package stephane.katende.weathernotifications;
+package stephane.katende.weathernotifications.Settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+import stephane.katende.weathernotifications.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SetLocationFragment#newInstance} factory method to
+ * Use the {@link PermissionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SetLocationFragment extends Fragment {
+public class PermissionFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,7 +25,7 @@ public class SetLocationFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SetLocationFragment() {
+    public PermissionFragment() {
         // Required empty public constructor
     }
 
@@ -36,8 +38,8 @@ public class SetLocationFragment extends Fragment {
      * @return A new instance of fragment SplashFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SetLocationFragment newInstance(String param1, String param2) {
-        SetLocationFragment fragment = new SetLocationFragment();
+    public static PermissionFragment newInstance(String param1, String param2) {
+        PermissionFragment fragment = new PermissionFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

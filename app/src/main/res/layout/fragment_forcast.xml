@@ -5,7 +5,7 @@
     android:id="@+id/myConstraitLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ForcastFragment">
+    tools:context=".Forcast.ForcastFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/_forcastToolbar"
@@ -20,9 +20,21 @@
         app:menu="@menu/forcast_menu"
         app:title="Forcast   " />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/_myRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_forcastToolbar" />
+
     <HorizontalScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,18 +43,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="I am a really really really really really really really really long ForeCast"
-                android:textAlignment="center"
-                android:textColor="@color/GREEN"
-                android:textSize="36sp" />
-
-        </LinearLayout>
+            android:orientation="vertical" />
     </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

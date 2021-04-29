@@ -4,7 +4,7 @@
     <item
         android:id="@+id/iconGame"
         android:icon="@drawable/ic_baseline_videogame_asset_24"
-        android:title="Game" />
+        android:title="TapSquare" />
     <item
         android:id="@+id/iconSettings"
         android:icon="@drawable/ic_baseline_settings_24"

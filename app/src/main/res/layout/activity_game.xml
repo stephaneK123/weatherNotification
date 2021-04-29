@@ -31,22 +31,9 @@
         android:textSize="8sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/_btnStartGame"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatToggleButton
-        android:id="@+id/_btnStartGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textOff="Start Game"
-        android:textOn="Start Game"
-        android:textSize="8sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/_btnLeaveGame" />
-
-    <stephane.katende.weathernotifications.TapSquare
+    <stephane.katende.weathernotifications.Startup.TapSquare
         android:id="@+id/_tapSquareCanvas"
         android:layout_width="0dp"
         android:layout_height="0dp"

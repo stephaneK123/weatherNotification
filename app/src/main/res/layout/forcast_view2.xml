@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/_time15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_time"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_temp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_feels"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_condition"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_wind"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_humidity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_uv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karantina_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <TextView
+        android:id="@+id/_tvCurrentTemp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/zendots_regular"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@id/_tvHighLow"
+        tools:layout_editor_absoluteX="12dp" />
+
+    <TextView
+        android:id="@+id/_tvDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <TextView
+        android:id="@+id/_tvContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+    <TextView
+        android:id="@+id/_tvHighLow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <TextView
+        android:id="@+id/_tvLastUpdate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="_tvCurrentTemp,_tvHighLow,_tvLastUpdate"
+
+        app:flow_verticalAlign="bottom"
+        app:flow_verticalGap="2dp"
+        app:flow_verticalStyle="packed"
+        app:flow_wrapMode="none"
+        app:layout_constraintBottom_toTopOf="@id/master"
+        app:layout_constraintEnd_toStartOf="@id/Flow2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.20" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/Flow2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="_tvDate,_tvContent"
+        app:flow_horizontalStyle="packed"
+        app:flow_verticalGap="2sp"
+        app:layout_constraintBottom_toTopOf="@id/master"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flow6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.20" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time,_temp,_feels,_condition,_wind,_humidity,_uv"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time4,_temp4,_feels4,_condition4,_wind4,_humidity4,_uv4"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time5,_temp5,_feels5,_condition5,_wind5,_humidity5,_uv5"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time6,_temp6,_feels6,_condition6,_wind6,_humidity6,_uv6"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time7,_temp7,_feels7,_condition7,_wind7,_humidity7,_uv7"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time8,_temp8,_feels8,_condition8,_wind8,_humidity8,_uv8"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time9,_temp9,_feels9,_condition9,_wind9,_humidity9,_uv9"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time10,_temp10,_feels10,_condition10,_wind10,_humidity10,_uv10"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time11,_temp11,_feels11,_condition11,_wind11,_humidity11,_uv11"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time12,_temp12,_feels12,_condition12,_wind12,_humidity12,_uv12"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time13,_temp13,_feels13,_condition13,_wind13,_humidity13,_uv13"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time14,_temp14,_feels14,_condition14,_wind14,_humidity14,_uv14"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/hour12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="_time15,_temp15,_feels15,_condition15,_wind15,_humidity15,_uv15"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="none"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="869dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/master"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="flow4,hour1,hour2,hour3,hour4,hour5,hour6,hour7,hour8,hour9,hour10,hour11,hour12"
+        app:flow_verticalAlign="bottom"
+
+        app:flow_verticalStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Flow2"
+        app:layout_constraintVertical_weight="0.80"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

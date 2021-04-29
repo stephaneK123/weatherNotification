@@ -1,4 +1,4 @@
-package stephane.katende.weathernotifications;
+package stephane.katende.weathernotifications.Alerts;
 
 import android.os.Bundle;
 
@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import stephane.katende.weathernotifications.R;
 
 
 public class AlertsFragment extends Fragment {

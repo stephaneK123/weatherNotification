@@ -6,64 +6,66 @@
     app:startDestination="@id/forcastFragment">
     <fragment
         android:id="@+id/alertsFragment"
-        android:name="stephane.katende.weathernotifications.AlertsFragment"
+        android:name="stephane.katende.weathernotifications.Alerts.AlertsFragment"
         android:label="fragment_alerts"
         tools:layout="@layout/fragment_alerts" >
         <action
             android:id="@+id/from_Alerts_to_Forcast"
-            app:destination="@id/forcastFragment"
-            app:popUpTo="@id/alertsFragment" />
+            app:destination="@id/forcastFragment" />
         <action
             android:id="@+id/from_Alerts_to_SetAlerts"
-            app:destination="@id/setAlertFragment"
-            app:popUpTo="@id/alertsFragment" />
+            app:destination="@id/setAlertFragment"/>
     </fragment>
     <fragment
         android:id="@+id/setAlertFragment"
-        android:name="stephane.katende.weathernotifications.SetAlertFragment"
+        android:name="stephane.katende.weathernotifications.SetAlerts.SetAlertFragment"
         android:label="fragment_set_alert"
         tools:layout="@layout/fragment_set_alert" >
         <action
             android:id="@+id/from_SetAlert_to_Forcast"
             app:destination="@id/forcastFragment"
-            app:popUpTo="@id/setAlertFragment" />
+            />
         <action
             android:id="@+id/from_SetAlert_to_Alerts"
-            app:destination="@id/alertsFragment"
-            app:popUpTo="@id/setAlertFragment" />
+            app:destination="@id/alertsFragment" />
 
     </fragment>
     <fragment
         android:id="@+id/forcastFragment"
-        android:name="stephane.katende.weathernotifications.ForcastFragment"
+        android:name="stephane.katende.weathernotifications.Forcast.ForcastFragment"
         android:label="fragment_forcast"
         tools:layout="@layout/fragment_forcast" >
         <action
             android:id="@+id/from_Forcast_to_SetAlerts"
             app:destination="@id/setAlertFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:popUpTo="@id/forcastFragment" />
+            app:enterAnim="@anim/fragment_fade_enter" />
         <action
             android:id="@+id/from_Forcast_to_Settings"
-            app:destination="@id/settingsFragment"
-            app:popUpTo="@id/forcastFragment" />
+            app:destination="@id/settingsFragment" />
         <action
             android:id="@+id/from_Forcast_to_Alerts"
-            app:destination="@id/alertsFragment"
-            app:popUpTo="@id/forcastFragment" />
+            app:destination="@id/alertsFragment" />
+        <action
+            android:id="@+id/from_Forcast_to_Game"
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="stephane.katende.weathernotifications.SettingsFragment"
+        android:name="stephane.katende.weathernotifications.Settings.SettingsFragment"
         android:label="SettingsFragment" >
         <action
             android:id="@+id/from_Settings_to_Forcast"
-            app:destination="@id/forcastFragment"
-            app:popUpTo="@id/settingsFragment" />
+            app:destination="@id/forcastFragment"/>
+        <action
+            android:id="@+id/from_Settings_to_SetAlerts"
+            app:destination="@id/setAlertFragment" />
+        <action
+            android:id="@+id/from_Settings_to_Alerts"
+            app:destination="@id/alertsFragment" />
     </fragment>
     <activity
         android:id="@+id/secondActivity"
-        android:name="stephane.katende.weathernotifications.SecondActivity"
+        android:name="stephane.katende.weathernotifications.Startup.SecondActivity"
         android:label="activity_second"
         tools:layout="@layout/activity_second" />
     <activity
@@ -73,6 +75,11 @@
         tools:layout="@layout/activity_game" />
     <fragment
         android:id="@+id/setLocationFragment"
-        android:name="stephane.katende.weathernotifications.SetLocationFragment"
+        android:name="stephane.katende.weathernotifications.Startup.SetLocationFragment"
         android:label="SetLocationFragment" />
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="stephane.katende.weathernotifications.Game.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" />
 </navigation>

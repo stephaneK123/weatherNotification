@@ -1,30 +1,21 @@
 package stephane.katende.weathernotifications;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
-import androidx.navigation.NavController;
-import androidx.navigation.NavGraph;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import android.widget.Button;
+import android.widget.TextView;
 
 import static android.app.NotificationManager.IMPORTANCE_DEFAULT;
 import static androidx.navigation.Navigation.findNavController;
@@ -35,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private final String NOTIFICATION_CHANNELID = "stephane.katende.weathernotifications";
     private final int notificationId = 1;
     NotificationCompat.Builder _myNotificationBuilder;
+    CoordinatorLayout coordinatorLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.Theme_WeatherNotifications);
         setContentView(R.layout.activity_main);
         _myNotificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNELID);
-
-
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
     }
 
     /**
@@ -83,5 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        //bring back nav
+        coordinatorLayout.setVisibility(View.VISIBLE);
+        super.onBackPressed();
+    }
 }
