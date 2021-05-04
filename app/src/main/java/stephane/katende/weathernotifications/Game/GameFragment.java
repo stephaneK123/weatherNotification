@@ -45,7 +45,7 @@ public class GameFragment extends Fragment {
     TapSquare2 tapSquare2;
     Button _btbStarGame;
     SharedPreferences sharedPreferences;
-    private String scoreTAG = "scoreTAG";
+    private final String scoreTAG = "scoreTAG";
     TextView scoreView;
 
 
