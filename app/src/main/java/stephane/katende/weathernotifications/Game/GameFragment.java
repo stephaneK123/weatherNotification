@@ -2,10 +2,12 @@ package stephane.katende.weathernotifications.Game;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
@@ -61,7 +63,7 @@ public class GameFragment extends Fragment {
         private boolean _squareTouched = false, _changeRectToGreen = false, _showTitleScreen = true, _showCountDownTimer = true, _isGameOn = false, _reCalculateSquarePos = true;
         private double _score = 0;
         private static final String TAG = "TapSquare";
-        String _currentLevel = null;
+        String _currentLevel = "???";
         CountDownLatch btnCounter = new CountDownLatch(1);
 
 
@@ -102,7 +104,7 @@ public class GameFragment extends Fragment {
 
         public void calculateHighScore() {
             String lastScore = sharedPreferences.getString(scoreTAG, "0");
-            if (Integer.valueOf(lastScore) < _score)
+            if (Double.valueOf(lastScore) < _score)
                 sharedPreferences.edit().putString(scoreTAG, String.valueOf(_score)).apply();
 
         }
@@ -351,6 +353,7 @@ public class GameFragment extends Fragment {
 
     @Override
     public void onResume() {
+
         scoreView.setText("HighScore : " + sharedPreferences.getString(scoreTAG, "0"));
         super.onResume();
 
@@ -366,5 +369,22 @@ public class GameFragment extends Fragment {
 
     }
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        getActivity().findViewById(R.id._tvBackground).setBackground(getResources().getDrawable(R.color.white));
+        TextView x = getActivity().findViewById(R.id._tvBackground);
+        x.setText(" Try to tap the square before it disappears! The game will end after certain numbers of squares have appeared. You get less time as the level increases. " +
+                "Try to beat your last score!");
 
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().findViewById(R.id._tvBackground).setVisibility(View.VISIBLE);
+        TextView x = getActivity().findViewById(R.id._tvBackground);
+        getActivity().findViewById(R.id._tvBackground).setBackground(getResources().getDrawable(R.color.ic_launcher_background));
+        x.setText("");
+    }
 }

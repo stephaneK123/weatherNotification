@@ -81,7 +81,7 @@ public final class ForecastViewHelper {
     public ForecastViewHelper() {
         //initialize
         //these don't change
-        _row[0] = "Time";
+        _row[0] = "    Time";
         _row[1] = "Temp";
         _row[2] = "FeelsLike";
         _row[3] = "Condition";

@@ -56,12 +56,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         _row12 = _currentForecastViewHelper.getRow12();
 
         //headers
-
         holder.headers[0].setText(_headers[0]);
         holder.headers[1].setText(_headers[1]);
         holder.headers[2].setText(_headers[2]);
-        holder.headers[3].setText(_headers[3]);
-        holder.headers[4].setText(_headers[4]);
+
         //rows
         holder.row[0].setText(_row[0]);
         holder.row[1].setText(_row[1]);
@@ -69,7 +67,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row[3].setText(_row[3]);
         holder.row[4].setText(_row[4]);
         holder.row[5].setText(_row[5]);
-        holder.row[6].setText(_row[6]);
 
         holder.row1[0].setText(_row1[0]);
         holder.row1[1].setText(_row1[1]);
@@ -77,7 +74,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row1[3].setText(_row1[3]);
         holder.row1[4].setText(_row1[4]);
         holder.row1[5].setText(_row1[5]);
-        holder.row1[6].setText(_row1[6]);
 
         holder.row2[0].setText(_row2[0]);
         holder.row2[1].setText(_row2[1]);
@@ -85,7 +81,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row2[3].setText(_row2[3]);
         holder.row2[4].setText(_row2[4]);
         holder.row2[5].setText(_row2[5]);
-        holder.row2[6].setText(_row2[6]);
 
         holder.row3[0].setText(_row3[0]);
         holder.row3[1].setText(_row3[1]);
@@ -93,7 +88,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row3[3].setText(_row3[3]);
         holder.row3[4].setText(_row3[4]);
         holder.row3[5].setText(_row3[5]);
-        holder.row3[6].setText(_row3[6]);
 
         holder.row4[0].setText(_row4[0]);
         holder.row4[1].setText(_row4[1]);
@@ -101,7 +95,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row4[3].setText(_row4[3]);
         holder.row4[4].setText(_row4[4]);
         holder.row4[5].setText(_row4[5]);
-        holder.row4[6].setText(_row4[6]);
 
         holder.row5[0].setText(_row5[0]);
         holder.row5[1].setText(_row5[1]);
@@ -109,7 +102,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row5[3].setText(_row5[3]);
         holder.row5[4].setText(_row5[4]);
         holder.row5[5].setText(_row5[5]);
-        holder.row5[6].setText(_row5[6]);
 
         holder.row6[0].setText(_row6[0]);
         holder.row6[1].setText(_row6[1]);
@@ -117,7 +109,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row6[3].setText(_row6[3]);
         holder.row6[4].setText(_row6[4]);
         holder.row6[5].setText(_row6[5]);
-        holder.row6[6].setText(_row6[6]);
 
         holder.row7[0].setText(_row7[0]);
         holder.row7[1].setText(_row7[1]);
@@ -125,7 +116,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row7[3].setText(_row7[3]);
         holder.row7[4].setText(_row7[4]);
         holder.row7[5].setText(_row7[5]);
-        holder.row7[6].setText(_row7[6]);
 
         holder.row8[0].setText(_row8[0]);
         holder.row8[1].setText(_row8[1]);
@@ -133,7 +123,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row8[3].setText(_row8[3]);
         holder.row8[4].setText(_row8[4]);
         holder.row8[5].setText(_row8[5]);
-        holder.row8[6].setText(_row8[6]);
 
         holder.row9[0].setText(_row9[0]);
         holder.row9[1].setText(_row9[1]);
@@ -141,7 +130,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row9[3].setText(_row9[3]);
         holder.row9[4].setText(_row9[4]);
         holder.row9[5].setText(_row9[5]);
-        holder.row9[6].setText(_row9[6]);
 
         holder.row10[0].setText(_row10[0]);
         holder.row10[1].setText(_row10[1]);
@@ -149,7 +137,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row10[3].setText(_row10[3]);
         holder.row10[4].setText(_row10[4]);
         holder.row10[5].setText(_row10[5]);
-        holder.row10[6].setText(_row10[6]);
 
         holder.row11[0].setText(_row11[0]);
         holder.row11[1].setText(_row11[1]);
@@ -157,7 +144,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row11[3].setText(_row11[3]);
         holder.row11[4].setText(_row11[4]);
         holder.row11[5].setText(_row11[5]);
-        holder.row11[6].setText(_row11[6]);
 
         holder.row12[0].setText(_row12[0]);
         holder.row12[1].setText(_row12[1]);
@@ -165,30 +151,29 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.row12[3].setText(_row12[3]);
         holder.row12[4].setText(_row12[4]);
         holder.row12[5].setText(_row12[5]);
-        holder.row12[6].setText(_row12[6]);
     }
 
     @Override
     public int getItemCount() {
-        return 7;
+        return 4;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         //vars
-        TextView[] headers = new TextView[5];
-        TextView[] row = new TextView[7];
-        TextView[] row1 = new TextView[7];
-        TextView[] row2 = new TextView[7];
-        TextView[] row3 = new TextView[7];
-        TextView[] row4 = new TextView[7];
-        TextView[] row5 = new TextView[7];
-        TextView[] row6 = new TextView[7];
-        TextView[] row7 = new TextView[7];
-        TextView[] row8 = new TextView[7];
-        TextView[] row9 = new TextView[7];
-        TextView[] row10 = new TextView[7];
-        TextView[] row11 = new TextView[7];
-        TextView[] row12 = new TextView[7];
+        TextView[] headers = new TextView[3];
+        TextView[] row = new TextView[6];
+        TextView[] row1 = new TextView[6];
+        TextView[] row2 = new TextView[6];
+        TextView[] row3 = new TextView[6];
+        TextView[] row4 = new TextView[6];
+        TextView[] row5 = new TextView[6];
+        TextView[] row6 = new TextView[6];
+        TextView[] row7 = new TextView[6];
+        TextView[] row8 = new TextView[6];
+        TextView[] row9 = new TextView[6];
+        TextView[] row10 = new TextView[6];
+        TextView[] row11 = new TextView[6];
+        TextView[] row12 = new TextView[6];
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

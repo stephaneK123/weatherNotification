@@ -3,1095 +3,1165 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_foreground"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/_time15"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/_temp15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time14" />
 
     <TextView
         android:id="@+id/_temp15"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/_feels15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time15"
+        app:layout_constraintTop_toBottomOf="@+id/_temp14" />
 
     <TextView
         android:id="@+id/_feels15"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/_condition15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp15"
+        app:layout_constraintTop_toBottomOf="@+id/_feels14" />
 
     <TextView
         android:id="@+id/_condition15"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/_wind15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels15"
+        app:layout_constraintTop_toBottomOf="@+id/_condition14" />
+
 
     <TextView
         android:id="@+id/_wind15"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition15"
+        app:layout_constraintTop_toBottomOf="@+id/_wind14" />
 
     <TextView
         android:id="@+id/_humidity15"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind15"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity14" />
 
     <TextView
         android:id="@+id/_time13"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_temp13"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_feels13"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time14"
+        app:layout_constraintEnd_toStartOf="@+id/_temp13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time12" />
 
     <TextView
         android:id="@+id/_condition13"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition14"
+        app:layout_constraintEnd_toStartOf="@+id/_wind13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels13"
+        app:layout_constraintTop_toBottomOf="@+id/_condition12" />
 
     <TextView
         android:id="@+id/_wind13"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind14"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition13"
+        app:layout_constraintTop_toBottomOf="@+id/_wind12" />
 
     <TextView
         android:id="@+id/_humidity13"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind13"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity12" />
 
+    <TextView
+        android:id="@+id/_temp13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp14"
+        app:layout_constraintEnd_toStartOf="@+id/_feels13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time13"
+        app:layout_constraintTop_toBottomOf="@+id/_temp12" />
+
+
+    <TextView
+        android:id="@+id/_feels13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels14"
+        app:layout_constraintEnd_toStartOf="@+id/_condition13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp13"
+        app:layout_constraintTop_toBottomOf="@+id/_feels12" />
 
     <TextView
         android:id="@+id/_time12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time13"
+        app:layout_constraintEnd_toStartOf="@+id/_temp12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time11" />
 
     <TextView
         android:id="@+id/_temp12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp13"
+        app:layout_constraintEnd_toStartOf="@+id/_feels12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time12"
+        app:layout_constraintTop_toBottomOf="@+id/_temp11" />
 
     <TextView
         android:id="@+id/_feels12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels13"
+        app:layout_constraintEnd_toStartOf="@+id/_condition12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp12"
+        app:layout_constraintTop_toBottomOf="@+id/_feels11" />
 
     <TextView
         android:id="@+id/_condition12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition13"
+        app:layout_constraintEnd_toStartOf="@+id/_wind12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels12"
+        app:layout_constraintTop_toBottomOf="@+id/_condition11" />
 
     <TextView
         android:id="@+id/_wind12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind13"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition12"
+        app:layout_constraintTop_toBottomOf="@+id/_wind11" />
+
 
     <TextView
         android:id="@+id/_humidity12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind12"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity11" />
 
     <TextView
         android:id="@+id/_time11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time12"
+        app:layout_constraintEnd_toStartOf="@+id/_temp11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time10" />
 
     <TextView
         android:id="@+id/_temp11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp12"
+        app:layout_constraintEnd_toStartOf="@+id/_feels11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time11"
+        app:layout_constraintTop_toBottomOf="@+id/_temp10" />
 
     <TextView
         android:id="@+id/_feels11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels12"
+        app:layout_constraintEnd_toStartOf="@+id/_condition11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp11"
+        app:layout_constraintTop_toBottomOf="@+id/_feels10" />
 
     <TextView
         android:id="@+id/_condition11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition12"
+        app:layout_constraintEnd_toStartOf="@+id/_wind11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels11"
+        app:layout_constraintTop_toBottomOf="@+id/_condition10" />
 
     <TextView
         android:id="@+id/_wind11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind12"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition11"
+        app:layout_constraintTop_toBottomOf="@+id/_wind10" />
 
     <TextView
         android:id="@+id/_humidity11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind11"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity10" />
 
     <TextView
         android:id="@+id/_time10"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time11"
+        app:layout_constraintEnd_toStartOf="@+id/_temp10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time9" />
 
     <TextView
         android:id="@+id/_temp10"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp11"
+        app:layout_constraintEnd_toStartOf="@+id/_feels10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time10"
+        app:layout_constraintTop_toBottomOf="@+id/_temp9" />
 
     <TextView
         android:id="@+id/_feels10"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels11"
+        app:layout_constraintEnd_toStartOf="@+id/_condition10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp10"
+        app:layout_constraintTop_toBottomOf="@+id/_feels9" />
 
     <TextView
         android:id="@+id/_condition10"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition11"
+        app:layout_constraintEnd_toStartOf="@+id/_wind10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels10"
+        app:layout_constraintTop_toBottomOf="@+id/_condition9" />
 
     <TextView
         android:id="@+id/_wind10"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind11"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition10"
+        app:layout_constraintTop_toBottomOf="@+id/_wind9" />
 
-    <TextView
-        android:id="@+id/_time14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_humidity14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_temp14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_wind14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_condition14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <TextView
-        android:id="@+id/_feels14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
 
     <TextView
         android:id="@+id/_humidity10"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind10"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity9" />
 
     <TextView
-        android:id="@+id/_time9"
+        android:id="@+id/_time14"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time15"
+        app:layout_constraintEnd_toStartOf="@+id/_temp14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time13" />
 
     <TextView
-        android:id="@+id/_temp9"
+        android:id="@+id/_humidity14"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind14"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity13" />
 
     <TextView
-        android:id="@+id/_feels9"
+        android:id="@+id/_temp14"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp15"
+        app:layout_constraintEnd_toStartOf="@+id/_feels14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time14"
+        app:layout_constraintTop_toBottomOf="@+id/_temp13" />
+
+    <TextView
+        android:id="@+id/_wind14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind15"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition14"
+        app:layout_constraintTop_toBottomOf="@+id/_wind13" />
+
+    <TextView
+        android:id="@+id/_condition14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition15"
+        app:layout_constraintEnd_toStartOf="@+id/_wind14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels14"
+        app:layout_constraintTop_toBottomOf="@+id/_condition13" />
+
+    <TextView
+        android:id="@+id/_feels14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels15"
+        app:layout_constraintEnd_toStartOf="@+id/_condition14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp14"
+        app:layout_constraintTop_toBottomOf="@+id/_feels13" />
+
 
     <TextView
         android:id="@+id/_condition9"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition10"
+        app:layout_constraintEnd_toStartOf="@+id/_wind9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels9"
+        app:layout_constraintTop_toBottomOf="@+id/_condition8" />
 
     <TextView
-        android:id="@+id/_wind9"
+        android:id="@+id/_time9"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time10"
+        app:layout_constraintEnd_toStartOf="@+id/_temp9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time8" />
+
+    <TextView
+        android:id="@+id/_feels9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels10"
+        app:layout_constraintEnd_toStartOf="@+id/_condition9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp9"
+        app:layout_constraintTop_toBottomOf="@+id/_feels8" />
 
     <TextView
         android:id="@+id/_humidity9"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind9"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity8" />
+
+    <TextView
+        android:id="@+id/_temp9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp10"
+        app:layout_constraintEnd_toStartOf="@+id/_feels9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time9"
+        app:layout_constraintTop_toBottomOf="@+id/_temp8" />
+
+    <TextView
+        android:id="@+id/_wind9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind10"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition9"
+        app:layout_constraintTop_toBottomOf="@+id/_wind8" />
 
     <TextView
         android:id="@+id/_time8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time9"
+        app:layout_constraintEnd_toStartOf="@+id/_temp8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time7" />
 
     <TextView
         android:id="@+id/_temp8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp9"
+        app:layout_constraintEnd_toStartOf="@+id/_feels8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time8"
+        app:layout_constraintTop_toBottomOf="@+id/_temp7" />
 
     <TextView
         android:id="@+id/_feels8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels9"
+        app:layout_constraintEnd_toStartOf="@+id/_condition8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp8"
+        app:layout_constraintTop_toBottomOf="@+id/_feels7" />
 
     <TextView
         android:id="@+id/_condition8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition9"
+        app:layout_constraintEnd_toStartOf="@+id/_wind8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels8"
+        app:layout_constraintTop_toBottomOf="@+id/_condition7" />
 
     <TextView
         android:id="@+id/_wind8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind9"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition8"
+        app:layout_constraintTop_toBottomOf="@+id/_wind7" />
 
     <TextView
         android:id="@+id/_humidity8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind8"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity7" />
 
     <TextView
         android:id="@+id/_time7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time8"
+        app:layout_constraintEnd_toStartOf="@+id/_temp7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time6" />
 
     <TextView
         android:id="@+id/_temp7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp8"
+        app:layout_constraintEnd_toStartOf="@+id/_feels7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time7"
+        app:layout_constraintTop_toBottomOf="@+id/_temp6" />
 
     <TextView
         android:id="@+id/_feels7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels8"
+        app:layout_constraintEnd_toStartOf="@+id/_condition7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp7"
+        app:layout_constraintTop_toBottomOf="@+id/_feels6" />
 
     <TextView
         android:id="@+id/_condition7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition8"
+        app:layout_constraintEnd_toStartOf="@+id/_wind7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels7"
+        app:layout_constraintTop_toBottomOf="@+id/_condition6" />
 
     <TextView
         android:id="@+id/_wind7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind8"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition7"
+        app:layout_constraintTop_toBottomOf="@+id/_wind6" />
 
     <TextView
         android:id="@+id/_humidity7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind7"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity6" />
 
     <TextView
         android:id="@+id/_time6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time7"
+        app:layout_constraintEnd_toStartOf="@+id/_temp6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time5" />
 
     <TextView
         android:id="@+id/_temp6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp7"
+        app:layout_constraintEnd_toStartOf="@+id/_feels6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time6"
+        app:layout_constraintTop_toBottomOf="@+id/_temp5" />
 
     <TextView
         android:id="@+id/_feels6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels7"
+        app:layout_constraintEnd_toStartOf="@+id/_condition6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp6"
+        app:layout_constraintTop_toBottomOf="@+id/_feels5" />
 
     <TextView
         android:id="@+id/_condition6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition7"
+        app:layout_constraintEnd_toStartOf="@+id/_wind6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels6"
+        app:layout_constraintTop_toBottomOf="@+id/_condition5" />
 
     <TextView
         android:id="@+id/_wind6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind7"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition6"
+        app:layout_constraintTop_toBottomOf="@+id/_wind5" />
 
     <TextView
         android:id="@+id/_humidity6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind6"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity5" />
 
     <TextView
         android:id="@+id/_time5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time6"
+        app:layout_constraintEnd_toStartOf="@+id/_temp5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time4" />
 
     <TextView
         android:id="@+id/_temp5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp6"
+        app:layout_constraintEnd_toStartOf="@+id/_feels5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time5"
+        app:layout_constraintTop_toBottomOf="@+id/_temp4" />
 
     <TextView
         android:id="@+id/_feels5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels6"
+        app:layout_constraintEnd_toStartOf="@+id/_condition5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp5"
+        app:layout_constraintTop_toBottomOf="@+id/_feels4" />
 
     <TextView
         android:id="@+id/_condition5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition6"
+        app:layout_constraintEnd_toStartOf="@+id/_wind5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels5"
+        app:layout_constraintTop_toBottomOf="@+id/_condition4" />
 
     <TextView
         android:id="@+id/_wind5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind6"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition5"
+        app:layout_constraintTop_toBottomOf="@+id/_wind4" />
 
     <TextView
         android:id="@+id/_humidity5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind5"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity4" />
 
     <TextView
         android:id="@+id/_time4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time5"
+        app:layout_constraintEnd_toStartOf="@+id/_temp4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_time" />
 
     <TextView
         android:id="@+id/_temp4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp5"
+        app:layout_constraintEnd_toStartOf="@+id/_feels4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time4"
+        app:layout_constraintTop_toBottomOf="@+id/_temp" />
 
     <TextView
         android:id="@+id/_feels4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels5"
+        app:layout_constraintEnd_toStartOf="@+id/_condition4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp4"
+        app:layout_constraintTop_toBottomOf="@+id/_feels" />
 
     <TextView
         android:id="@+id/_condition4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition5"
+        app:layout_constraintEnd_toStartOf="@+id/_wind4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels4"
+        app:layout_constraintTop_toBottomOf="@+id/_condition" />
 
     <TextView
         android:id="@+id/_wind4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind5"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition4"
+        app:layout_constraintTop_toBottomOf="@+id/_wind" />
 
     <TextView
         android:id="@+id/_humidity4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind4"
+        app:layout_constraintTop_toBottomOf="@+id/_humidity" />
 
     <TextView
         android:id="@+id/_time"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/_time4"
+        app:layout_constraintEnd_toStartOf="@+id/_temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_tvCurrentTemp" />
 
     <TextView
         android:id="@+id/_temp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/_temp4"
+        app:layout_constraintEnd_toStartOf="@+id/_feels"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_time"
+        app:layout_constraintTop_toBottomOf="@+id/_tvCurrentTemp" />
 
     <TextView
         android:id="@+id/_feels"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/_feels4"
+        app:layout_constraintEnd_toStartOf="@+id/_condition"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_temp"
+        app:layout_constraintTop_toBottomOf="@+id/_tvCurrentTemp" />
 
     <TextView
         android:id="@+id/_condition"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/_condition4"
+        app:layout_constraintEnd_toStartOf="@+id/_wind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_feels"
+        app:layout_constraintTop_toBottomOf="@+id/_tvCurrentTemp" />
 
     <TextView
         android:id="@+id/_wind"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/_wind4"
+        app:layout_constraintEnd_toStartOf="@+id/_humidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_condition"
+        app:layout_constraintTop_toBottomOf="@+id/_tvHighLow" />
 
     <TextView
         android:id="@+id/_humidity"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/karantina_light"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/_humidity4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/_wind"
+        app:layout_constraintTop_toBottomOf="@+id/_tvHighLow" />
 
     <TextView
         android:id="@+id/_tvCurrentTemp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/zendots_regular"
         android:gravity="center"
+        android:text="100"
         android:textAlignment="center"
-        android:textSize="35sp"
+        android:textSize="100sp"
         android:typeface="serif"
-        app:layout_constraintBottom_toTopOf="@id/_tvHighLow"
-        tools:layout_editor_absoluteX="12dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/_tvDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/_tvDate"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="30dp" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Monday, April 24 2021"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/_tvCurrentTemp"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/_tvHighLow"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:gravity="fill"
+        android:text="65/45"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="90dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/flow6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:constraint_referenced_ids="_tvCurrentTemp,_tvHighLow"
-
-        app:flow_verticalAlign="bottom"
-        app:flow_verticalGap="2dp"
-        app:flow_verticalStyle="packed"
-        app:flow_wrapMode="none"
-        app:layout_constraintBottom_toTopOf="@id/master"
-        app:layout_constraintEnd_toStartOf="@id/Flow2"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/_tvDate"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_weight="0.20" />
+        app:layout_constraintStart_toStartOf="@+id/_tvDate"
+        app:layout_constraintTop_toBottomOf="@+id/_tvDate" />
 
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/Flow2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:constraint_referenced_ids="_tvDate"
-        app:flow_horizontalStyle="packed"
-        app:flow_verticalGap="2sp"
-        app:layout_constraintBottom_toTopOf="@id/master"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/flow6"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_weight="0.20" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/flow4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="_time,_temp,_feels,_condition,_wind,_humidity"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time4,_temp4,_feels4,_condition4,_wind4,_humidity4"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time5,_temp5,_feels5,_condition5,_wind5,_humidity5"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time6,_temp6,_feels6,_condition6,_wind6,_humidity6"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time7,_temp7,_feels7,_condition7,_wind7,_humidity7"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time8,_temp8,_feels8,_condition8,_wind8,_humidity8"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time9,_temp9,_feels9,_condition9,_wind9,_humidity9"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp">
-
-        <androidx.constraintlayout.helper.widget.Flow
-            android:id="@+id/master"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:constraint_referenced_ids="flow4,hour1,hour2,hour3,hour4,hour5,hour6,hour7,hour8,hour9,hour10,hour11,hour12"
-            app:flow_verticalAlign="bottom"
-
-            app:flow_verticalStyle="packed"
-            tools:visibility="visible" />
-    </androidx.constraintlayout.helper.widget.Flow>
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time10,_temp10,_feels10,_condition10,_wind10,_humidity10"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time11,_temp11,_feels11,_condition11,_wind11,_humidity11"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time12,_temp12,_feels12,_condition12,_wind12,_humidity12"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time13,_temp13,_feels13,_condition13,_wind13,_humidity13"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time14,_temp14,_feels14,_condition14,_wind14,_humidity14"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
-
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/hour12"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="_time15,_temp15,_feels15,_condition15,_wind15,_humidity15"
-        app:flow_horizontalAlign="start"
-        app:flow_horizontalStyle="packed"
-        app:flow_wrapMode="none"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="869dp" />
+        app:layout_constraintGuide_begin="154dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

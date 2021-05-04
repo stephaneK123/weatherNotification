@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import stephane.katende.weathernotifications.R;
 
@@ -42,6 +45,19 @@ public class ForcastFragment extends Fragment {
         _myFAB = getActivity().findViewById(R.id._btnFloating);
         _myBottomNav = getActivity().findViewById(R.id._bottomNav);
         _myRecyclerView = view.findViewById(R.id._myRecyclerView);
+
+        /** RECYCLER VIEW  BINDING **/
+        //data setup
+        setUpDays();
+        //make your adapter and give it the arraylist
+        Adapter adapter = new Adapter(getActivity(), _myArrayForecast);
+
+        //set the adapter
+        _myRecyclerView.setAdapter(adapter);
+        SnapHelper snapHelper = new LinearSnapHelper();
+        linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        snapHelper.attachToRecyclerView(_myRecyclerView); //WARNING THIS CRASHES THE APP??
+        _myRecyclerView.setLayoutManager(linearLayoutManager);
 
     }
 
@@ -94,17 +110,8 @@ public class ForcastFragment extends Fragment {
         });
 
 
-        /** RECYCLER VIEW  BINDING **/
-        //data setup
-        setUpDays();
-      //make your adapter and give it the arraylist
-        Adapter adapter = new Adapter(getActivity(), _myArrayForecast);
 
 
-        //set the adapter
-       _myRecyclerView.setAdapter(adapter);
-        linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
-        _myRecyclerView.setLayoutManager(linearLayoutManager);
     }
 
      void setUpDays() {

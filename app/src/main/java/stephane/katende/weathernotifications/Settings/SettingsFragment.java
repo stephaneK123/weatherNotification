@@ -1,7 +1,9 @@
 package stephane.katende.weathernotifications.Settings;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,6 +35,20 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         _myBottomNav = getActivity().findViewById(R.id._bottomNav);
         _myFAB = getActivity().findViewById(R.id._btnFloating);
     }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        getActivity().findViewById(R.id._tvBackground).setBackground(getResources().getDrawable(R.color.white));
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().findViewById(R.id._tvBackground).setBackground(getResources().getDrawable(R.color.ic_launcher_background));
+    }
+
+
 
     @Override
     public void onResume() {
