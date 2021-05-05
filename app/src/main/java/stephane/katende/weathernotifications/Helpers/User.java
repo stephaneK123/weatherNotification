@@ -1,16 +1,18 @@
 package stephane.katende.weathernotifications.Helpers;
+import android.location.Location;
+
 import java.util.HashSet;
 
 public class User {
     private String _name;
-    private UserLocation _currentLocation;
+    private Location _currentLocation;
     private HashSet<Alerts> _listOfAlerts = new HashSet<>();
 
     /**
      * Create a user with a UserLocation
      * @param location the location of the user
      */
-    public User(UserLocation location){
+    public User(Location location){
         _currentLocation = location;
     }
 
@@ -28,7 +30,7 @@ public class User {
      * @param name the name of the user
      * @param location the location of the user
      */
-    public User(String name, UserLocation location){
+    public User(String name, Location location){
     _name = name;
     _currentLocation = location;
     }
@@ -55,7 +57,7 @@ public class User {
      * Get the current location of a user
      * @return the UserLocation of the user
      */
-    public UserLocation getCurrentLocation() {
+    public Location getCurrentLocation() {
         return _currentLocation;
     }
 
@@ -63,7 +65,7 @@ public class User {
      * Set the current location of the user
      * @param _currentLocation the location
      */
-    public void setCurrentLocation(UserLocation _currentLocation) {
+    public void setCurrentLocation(Location _currentLocation) {
         this._currentLocation = _currentLocation;
     }
 

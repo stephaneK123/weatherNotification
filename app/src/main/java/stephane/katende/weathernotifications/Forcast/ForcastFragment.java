@@ -281,6 +281,11 @@ public class ForcastFragment extends Fragment {
         return fragment;
     }
 
+    public static ForcastFragment newInstance() {
+        ForcastFragment fragment = new ForcastFragment();
+        return fragment;
+    }
+
 
 
     @Override

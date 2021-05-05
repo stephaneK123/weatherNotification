@@ -1,43 +1,96 @@
 package stephane.katende.weathernotifications.Settings;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
+import stephane.katende.weathernotifications.MainActivity;
 import stephane.katende.weathernotifications.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PermissionFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class PermissionFragment extends Fragment {
+    private static final String ARG_PARAM1 = "param1", ARG_PARAM2 = "param2";;
+    private String mParam1,  mParam2;
+    androidx.appcompat.widget.Toolbar myToolBar;
+    ConstraintLayout constraintLayout;
+    private static final String SHOW_PERMS_KEY = "setlocationkey"; //is the location fragment already showed?
+    SharedPreferences sharedPreferences;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    @Override
+    public void onResume() {
+        super.onResume();
+        //are permissions enabled?
+        constraintLayout.setOnClickListener(v -> {
+            if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(getContext(),
+                    Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {//permissions not granted
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION}, 100);
+            }
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+            //is location enabled?
+            boolean gpsOn = false, networkOn = false;
+            LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 
-    public PermissionFragment() {
-        // Required empty public constructor
+            try {
+                gpsOn = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+                networkOn = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+            } catch (Exception e) {
+
+            }
+
+            if (!gpsOn && !networkOn) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Please enable GPS")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                            }
+                        }).setNegativeButton("Nah", null )
+                        .show();
+            }
+
+
+
+        });
+
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SplashFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+    @Override
+    public void onDetach() {
+        sharedPreferences.edit().putBoolean(SHOW_PERMS_KEY, true).apply();
+        super.onDetach();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        myToolBar = view.findViewById(R.id._myToolbar);
+        constraintLayout = view.findViewById(R.id.myLayout);
+
+    }
+
     public static PermissionFragment newInstance(String param1, String param2) {
         PermissionFragment fragment = new PermissionFragment();
         Bundle args = new Bundle();
@@ -57,9 +110,27 @@ public class PermissionFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_splash, container, false);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+
+
+        return view;
+    }
+
+    public PermissionFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Set a tool bar title, set a tool bar sub title as @userLocation
+     *
+     * @param userLocation the location of the user, must be <= 34 chars
+     */
+    private void setToolbarTitle(String userLocation) {
+        myToolBar.setTitle("Enable Permissions");
+        if (userLocation.length() <= 34)
+            myToolBar.setSubtitle(userLocation);
     }
 }
