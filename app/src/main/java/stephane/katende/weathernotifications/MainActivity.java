@@ -103,8 +103,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         alertsArray = gson.fromJson(json, new TypeToken<List<AlertObject>>() {}.getType()); //very strange but works
 
         apiResponse = updateApiData();
+        JSONObject temp = readFromFileSystem();
         if (apiResponse == null) {
-            apiResponse = readFromFileSystem();
+            apiResponse = temp;
         }
 
         updateForecastScreen(apiResponse);
