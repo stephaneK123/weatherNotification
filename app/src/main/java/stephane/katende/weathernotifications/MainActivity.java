@@ -43,6 +43,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -108,7 +110,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             apiResponse = temp;
         }
 
-        updateForecastScreen(apiResponse);
+        try {
+            updateForecastScreen(apiResponse);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -185,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      * @return a JSONObject, probably a huge one with the four day forecast in it. Returns null if api call fails
      */
     public JSONObject updateApiData() {
-        String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + String.valueOf(lat) + "&lon=" + String.valueOf(lon) + "&appid=" + API_KEY;
+        String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + String.valueOf(lat) + "&lon=" + String.valueOf(lon) + "&cnt=36&appid=" + API_KEY; //TODO CHANGE TO 96
 
         final JSONObject[] jsonObj = new JSONObject[1];
 
@@ -193,7 +199,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             @Override
             public void onResponse(JSONObject response) {
                 Log.i("api", response.toString());
-                checkTests(response);
+                try {
+                    checkTests(response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 jsonObj[0] = response;
             }
         }, new Response.ErrorListener() {
@@ -261,8 +271,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      *
      * @param response the api response, a huge 4 day hourly forecast. Probably overkill but we'll only use the first part.
      */
-    private void checkTests(JSONObject response){
-
+    private void checkTests(JSONObject response) throws JSONException {
+        JSONArray array = response.getJSONArray("list");
     }
 
     /**
@@ -270,11 +280,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      *
      * @param response the api response. May be null, so will default to all '0's
      */
-    public void updateForecastScreen(JSONObject response) {
+    public void updateForecastScreen(JSONObject response) throws JSONException {
         if (response == null) {
             //fill all slots with '0' - I'm unsure about how to actually get the strings into his textviews.
         } else {
             //fill the slot with the data currently listed in the JSONObject - Need to figure out something with this
+            JSONArray array = response.getJSONArray("list");
         }
     }
 
