@@ -27,7 +27,6 @@ import java.util.List;
 import java.util.Locale;
 
 import stephane.katende.weathernotifications.Forcast.ForcastFragment;
-import stephane.katende.weathernotifications.Helpers.User;
 import stephane.katende.weathernotifications.MainActivity;
 import stephane.katende.weathernotifications.R;
 

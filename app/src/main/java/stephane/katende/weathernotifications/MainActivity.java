@@ -17,8 +17,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -46,14 +44,22 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONObject;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import stephane.katende.weathernotifications.Settings.PermissionFragment;
+import stephane.katende.weathernotifications.Startup.AlertObject;
 import stephane.katende.weathernotifications.Startup.RequestSingleton;
-import stephane.katende.weathernotifications.Startup.SetLocationFragment;
 
 import static android.app.NotificationManager.IMPORTANCE_DEFAULT;
 
@@ -61,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     FragmentManager _myFragmentManager;
     FragmentContainerView _myFragmentView;
     private final String NOTIFICATION_CHANNELID = "stephane.katende.weathernotifications";
-    String mState, mCity;
     private final int notificationId = 1;
     NotificationCompat.Builder _myNotificationBuilder;
     CoordinatorLayout coordinatorLayout;
@@ -70,14 +75,15 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     SharedPreferences sharedPreferences;
 
     //SharedPref Keys
-    private static final String ALERT_PREF_NAME = "alertPrefs";
     private static final String ALERT_ARRAY_PREF = "alertArray";
-    private static final String CACHED_API_RESPONSE = "cachedJSONObject";
-    private static final String API_KEY = "a1ab34e7fdfac19880f3782401882278";
-    private String zip; //TODO - default, should change (be part of sharedprefs)
-    private String country; //TODO - maybe have changeable? Or doesn't matter if using lat/lon
+    private static final String LAT_KEY = "latkey", LON_KEY = "logkey";
 
-    private static final String LAT_KEY = "latkey", LOG_KEY = "logkey", STATE_KEY = "statekey", CITY_KEY = "citykey"; //is the location fragment already showed?
+    private static final String API_KEY = "a1ab34e7fdfac19880f3782401882278";
+    private double lat;
+    private double lon;
+
+    JSONObject apiResponse;
+    ArrayList<AlertObject> alertsArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,18 +96,42 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         _myNotificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNELID);
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
         //Get shared layout stuff
-        SharedPreferences prefs = getSharedPreferences(ALERT_PREF_NAME, Context.MODE_PRIVATE);
-        // JSONObject apiResponse = prefs.get
-        zip = "05401";
-        country = "us";
+        lat = sharedPreferences.getFloat(LAT_KEY, (float) 0.0);
+        lon = sharedPreferences.getFloat(LON_KEY, (float) 0.0);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString(ALERT_ARRAY_PREF, ""); //todo set default alert
+        alertsArray = gson.fromJson(json, new TypeToken<List<AlertObject>>() {}.getType()); //very strange but works
 
-        updateForecastScreen(updateApiData());
+        apiResponse = updateApiData();
+        if (apiResponse == null) {
+            apiResponse = readFromFileSystem();
+        }
+
+        updateForecastScreen(apiResponse);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         handleEssentials();
+    }
+
+    /**
+     * Store apiResponse in file and the alertsArray in shared prefs on app close.
+     */
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        saveToFileSystem(apiResponse);
+
+        SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(alertsArray);
+        prefsEditor.putString(ALERT_ARRAY_PREF, json);
+        prefsEditor.commit();
+
+        /*** should automatically save lat + long to sharedPrefs ***/
     }
 
     /**
@@ -140,7 +170,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         managerCompat.notify(notificationId, _myNotificationBuilder.build());
     }
 
-
     @Override
     public void onBackPressed() {
         //bring back nav
@@ -153,11 +182,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      * Also calls the checkTests method if the api call successfully responds
      *
      * @return a JSONObject, probably a huge one with the four day forecast in it. Returns null if api call fails
-     * TODO - Maybe swap to lat/long?
-     * ***CURRENTLY FAILS - WAIT UNTIL STUDENT ACCOUNT IS APPROVED (SHOULD BE BY 5/4/2021)***
      */
     public JSONObject updateApiData() {
-        String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?zip=" + zip + "," + country + "&appid=" + API_KEY;
+        String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + String.valueOf(lat) + "&lon=" + String.valueOf(lon) + "&appid=" + API_KEY;
 
         final JSONObject[] jsonObj = new JSONObject[1];
 
@@ -172,7 +199,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("api", "shit's broke, sorry");
+                Log.e("api", error.toString());
                 jsonObj[0] = null;
             }
         });
@@ -181,8 +208,51 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         RequestSingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
 
         return jsonObj[0];
-
     }
+
+    /**
+     * save an object to a file - will be stored in cachedApiResponse.bin
+     * @param object the object you'd like to save, shouldn't be null, could be empty?
+     */
+    public synchronized void saveToFileSystem(JSONObject object) {
+        try {
+            String tempPath = getApplicationContext().getFilesDir() + "/cachedApiResponse.bin";
+            File file = new File(tempPath);
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file));
+            oos.writeObject(object);
+            oos.flush();
+            oos.close();
+            Log.i("caching", "saveToFileSystem: saved object to " + tempPath);
+        } catch (Exception e) {
+            Log.e("caching", "Couldn't save object to file: " + e.toString());
+        }
+    }
+
+    /**
+     * read cached api response from file and return as a JSONObject. Should work?
+     * @return a cached JSONObject, will be null if no file exists (or error)
+     */
+    public synchronized JSONObject readFromFileSystem() {
+        JSONObject obj = new JSONObject();
+        try {
+            String tempPath = getApplicationContext().getFilesDir() + "/cachedApiResponse.bin";
+            File file = new File(tempPath);
+            if (file.exists()) {
+                ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
+                obj = (JSONObject) ois.readObject();
+                ois.close();
+                Log.i("caching", "readFromFileSystem: read object from " + tempPath);
+            } else {
+                obj = null;
+            }
+        } catch (Exception e) {
+            Log.e("caching", "Couldn't read object to file: " + e.toString());
+            obj = null;
+        }
+
+        return obj;
+    }
+
 
     /**
      * Check the current values against all of the user-set tests and create notifications when they're true
@@ -190,19 +260,26 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      *
      * @param response the api response, a huge 4 day hourly forecast. Probably overkill but we'll only use the first part.
      */
-    private void checkTests(JSONObject response) {
+    private void checkTests(JSONObject response){
 
     }
 
     /**
      * update all of the textviews in ForecastFragment using the api response (or a cached version).
      *
-     * @param response the api response. May be null, if so will used cached JSONObject or default (all '0's);
+     * @param response the api response. May be null, so will default to all '0's
      */
     public void updateForecastScreen(JSONObject response) {
-
+        if (response == null) {
+            //fill all slots with '0' - I'm unsure about how to actually get the strings into his textviews.
+        } else {
+            //fill the slot with the data currently listed in the JSONObject - Need to figure out something with this
+        }
     }
 
+
+
+    /******************* THE CODE BELOW HANDLES LOCATION PERMISSIONS AND FINDING THE USER'S LAT AND LON ***********************/
     /**
      * Check if the location permissions are enabled
      */
@@ -257,36 +334,21 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     @Override
     public void onLocationChanged(@NonNull Location location) {
         myLocation = location;
-        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
-        try {
-            List<Address> addressList = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-            sharedPreferences.edit()
-                    .putString(CITY_KEY, addressList.get(0).getLocality())
-                    .putString(STATE_KEY, String.valueOf(addressList.get(0).getAdminArea()))
-                    .putString(LAT_KEY, String.valueOf(location.getLatitude()))
-                    .putString(LOG_KEY, String.valueOf(location.getLongitude())).
-                    apply();
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
+        sharedPreferences.edit()
+                .putFloat(LAT_KEY, (float) location.getLatitude())
+                .putFloat(LON_KEY, (float) location.getLongitude())
+                .apply();
     }
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
-
     }
 
     @Override
     public void onProviderEnabled(@NonNull String provider) {
-
     }
 
     @Override
     public void onProviderDisabled(@NonNull String provider) {
-
     }
 }

@@ -99,7 +99,7 @@ public final class ForecastViewHelper {
         _row9[0] = "4pm";
         _row10[0] = "6pm";
         _row11[0] = "8pm";
-        _row12[0] = "11pm";
+        _row12[0] = "10pm";
     }
 
 
