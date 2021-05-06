@@ -111,6 +111,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         updateApiData();
 
+        startService(new Intent(getApplicationContext(),ApiUpdates.class));
+
     }
 
     /**
