@@ -104,17 +104,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         String json = sharedPreferences.getString(ALERT_ARRAY_PREF, ""); //todo set default alert
         alertsArray = gson.fromJson(json, new TypeToken<List<AlertObject>>() {}.getType()); //very strange but works
 
-        apiResponse = updateApiData();
-        JSONObject temp = readFromFileSystem();
-        if (apiResponse == null) {
-            apiResponse = temp;
-        }
+        updateApiData();
 
-        try {
-            updateForecastScreen(apiResponse);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
@@ -190,35 +181,38 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      *
      * @return a JSONObject, probably a huge one with the four day forecast in it. Returns null if api call fails
      */
-    public JSONObject updateApiData() {
-        String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + String.valueOf(lat) + "&lon=" + String.valueOf(lon) + "&cnt=36&appid=" + API_KEY; //TODO CHANGE TO 96
-
-        final JSONObject[] jsonObj = new JSONObject[1];
+    public void updateApiData() {
+        String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + String.valueOf(lat) + "&lon=" + String.valueOf(lon) + "&cnt=36&units=imperial&appid=" + API_KEY; //TODO CHANGE TO 96
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 Log.i("api", response.toString());
+                saveToFileSystem(response);
+
                 try {
-                    checkTests(response);
+//                    checkTests();
+                    updateForecastScreen(response);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                jsonObj[0] = response;
             }
         }, new Response.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("api", error.toString());
-                jsonObj[0] = null;
+                JSONObject jsonObject = readFromFileSystem();
+                try {
+                    updateForecastScreen(jsonObject);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
         // Access the RequestQueue through our singleton class.
         RequestSingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
-
-        return jsonObj[0];
     }
 
     /**
@@ -244,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      * @return a cached JSONObject, will be null if no file exists (or error)
      */
     public synchronized JSONObject readFromFileSystem() {
-        JSONObject obj = new JSONObject();
+        JSONObject obj;
         try {
             String tempPath = getApplicationContext().getFilesDir() + "/cachedApiResponse.bin";
             File file = new File(tempPath);
@@ -268,11 +262,49 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     /**
      * Check the current values against all of the user-set tests and create notifications when they're true
      * Only runs if the api successfully responds.
-     *
-     * @param response the api response, a huge 4 day hourly forecast. Probably overkill but we'll only use the first part.
      */
-    private void checkTests(JSONObject response) throws JSONException {
-        JSONArray array = response.getJSONArray("list");
+    private void checkTests() throws JSONException {
+        JSONArray array;
+
+        String url = "https://api.openweathermap.org/data/2.5/weather?lat=" + String.valueOf(lat) + "&lon=" + String.valueOf(lon) + "&cnt=36&units=imperial&appid=" + API_KEY; //TODO CHANGE TO 96
+
+        final JSONObject[] jsonObj = new JSONObject[1];
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.i("api2", response.toString());
+                jsonObj[0] = response;
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("api", error.toString());
+                jsonObj[0] = null;
+            }
+        });
+
+        // Access the RequestQueue through our singleton class.
+        RequestSingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
+
+        if (jsonObj[0] == null) { return; }
+
+        for (int i = 0; i < alertsArray.size(); i++) {
+            Log.i("test","test");
+
+            switch (alertsArray.get(i).getWeatherCond()) {
+                case "temp":
+                   // int currentTemp = jsonObj[0].getJSONObect("main").
+                    break;
+                case "feelsLike":
+                    break;
+                case "humidity":
+                    break;
+                case "windSpeed":
+                    break;
+            }
+        }
     }
 
     /**
@@ -286,6 +318,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         } else {
             //fill the slot with the data currently listed in the JSONObject - Need to figure out something with this
             JSONArray array = response.getJSONArray("list");
+            String temp = array.getJSONObject(0).getJSONObject("main").getString("temp");
+            
+
         }
     }
 

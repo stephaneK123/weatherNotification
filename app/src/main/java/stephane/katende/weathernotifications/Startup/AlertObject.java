@@ -51,6 +51,8 @@ public class AlertObject {
         return _weatherCond;
     }
 
+    public String toString() { return _weatherCond + " " + _operand + " " + _testValue; }
+
     /**
      * checks an input value against the test value, returns a boolean based on the operand and the test value.
      * example:AlertObject.testValue=20, AlertObject.operand="gt" -> AlertObject.checkTestValues(42) == true
