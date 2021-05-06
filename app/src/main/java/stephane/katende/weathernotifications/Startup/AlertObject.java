@@ -9,7 +9,7 @@ public class AlertObject {
 
     private String _weatherCond; //can only be "temp", "feelsLike", "humidity", or "windSpeed". Case-Sensitive. Never empty or null
     private String _operand; //can only be "gt", "lt, or "eq". Case Sensitive. Never empty or null
-    private int _testValue; //can be whatever, including 0 and negatives
+    private double _testValue; //can be whatever, including 0 and negatives
 
 
     /**
@@ -26,7 +26,7 @@ public class AlertObject {
      *                should only be one of these (case sensitive), shouldn't be empty or null.
      * @param testValue The value you'd like to test against.
      */
-    public AlertObject (String weatherCond, String operand, int testValue){
+    public AlertObject (String weatherCond, String operand, double testValue){
         _weatherCond = weatherCond;
         _operand = operand;
         _testValue = testValue;
@@ -39,7 +39,7 @@ public class AlertObject {
         assert (_operand.equals("gt") || _operand.equals("lt") || _operand.equals("eq"));
     }
 
-    public int getTestValue() {
+    public double getTestValue() {
         return _testValue;
     }
 
@@ -60,7 +60,7 @@ public class AlertObject {
      * @param v the value you'd like to test your testValue against
      * @return a boolean based on how v tests against testValue using its operand
      */
-    public boolean checkTestValues(int v){
+    public boolean checkTestValue(double v){
         switch (_operand){
             case "gt" :
                 return (v > _testValue);

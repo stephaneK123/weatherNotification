@@ -17,6 +17,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -56,6 +58,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -78,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     //SharedPref Keys
     private static final String ALERT_ARRAY_PREF = "alertArray";
-    private static final String LAT_KEY = "latkey", LON_KEY = "logkey";
+    private static final String LAT_KEY = "latkey", LOG_KEY = "logkey", STATE_KEY = "statekey", CITY_KEY = "citykey"; //is the location fragment already showed?
 
     private static final String API_KEY = "a1ab34e7fdfac19880f3782401882278";
     private double lat;
@@ -99,13 +102,52 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
         //Get shared layout stuff
         lat = sharedPreferences.getFloat(LAT_KEY, (float) 0.0);
-        lon = sharedPreferences.getFloat(LON_KEY, (float) 0.0);
+        lon = sharedPreferences.getFloat(LOG_KEY, (float) 0.0);
         Gson gson = new Gson();
-        String json = sharedPreferences.getString(ALERT_ARRAY_PREF, ""); //todo set default alert
+        String json = sharedPreferences.getString(ALERT_ARRAY_PREF, "[{\"_operand\":\"gt\",\"_testValue\":100.0,\"_weatherCond\":\"temp\"}]"); //todo set default alert
         alertsArray = gson.fromJson(json, new TypeToken<List<AlertObject>>() {}.getType()); //very strange but works
+
+        //addAlert("temp","gt", 20); //TODO sample add alert, should be removed
 
         updateApiData();
 
+    }
+
+    /**
+     * creates a new alertObject and adds it to alertsArray
+     * These read as "WeatherCond Operand TestValue", i.e. "Humidity less than 98[%]" or "temperature greater than 45F"
+     *
+     * @param weatherCond the weather condition you'd like to test whenever an api call is made. They can include:
+     *                    "temp", "feelsLike", "humidity", & "windSpeed" (case sensitive)
+     *                    should only be one of these, shouldn't be empty or null.
+     * @param operand the way you'd like to compare the weather condition to your testing value(n). They include:
+     *                "gt" -> ">"
+     *                "lt" -> "<"
+     *                "eq" -> "=="
+     *                should only be one of these (case sensitive), shouldn't be empty or null.
+     * @param value The value you'd like to test against.
+     */
+    private void addAlert(String weatherCond, String operand, double value) {
+        alertsArray.add(new AlertObject(weatherCond,operand,value));
+    }
+
+    /**
+     * removes the AlertObject at the given index from alertsArray
+     * @param index the index of the object you'd like to remove
+     */
+    private void removeAlert(int index){
+        alertsArray.remove(index);
+    }
+
+    /**
+     * removes an AlertObject from the alertsArray given the object exists within it.
+     * @param obj an example of the object you'd like to remove (doesn't have to be the exact one, I think).
+     *            don't quote me on that last part tho
+     */
+    private void removeAlert(AlertObject obj){
+        if (alertsArray.contains(obj)){
+            alertsArray.remove(obj);
+        }
     }
 
     @Override
@@ -182,7 +224,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      * @return a JSONObject, probably a huge one with the four day forecast in it. Returns null if api call fails
      */
     public void updateApiData() {
-        String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + String.valueOf(lat) + "&lon=" + String.valueOf(lon) + "&cnt=36&units=imperial&appid=" + API_KEY; //TODO CHANGE TO 96
+        String url = "https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=" + lat + "&lon=" + lon + "&cnt=36&units=imperial&appid=" + API_KEY; //TODO CHANGE TO 96
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -191,7 +233,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 saveToFileSystem(response);
 
                 try {
-//                    checkTests();
+                    checkTests();
                     updateForecastScreen(response);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -218,6 +260,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     /**
      * save an object to a file - will be stored in cachedApiResponse.bin
      * @param object the object you'd like to save, shouldn't be null, could be empty?
+     * TODO Doesn't work right now, need to fix
      */
     public synchronized void saveToFileSystem(JSONObject object) {
         try {
@@ -236,6 +279,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     /**
      * read cached api response from file and return as a JSONObject. Should work?
      * @return a cached JSONObject, will be null if no file exists (or error)
+     * TODO Doesn't work right now, need to fix
      */
     public synchronized JSONObject readFromFileSystem() {
         JSONObject obj;
@@ -264,47 +308,60 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
      * Only runs if the api successfully responds.
      */
     private void checkTests() throws JSONException {
-        JSONArray array;
-
-        String url = "https://api.openweathermap.org/data/2.5/weather?lat=" + String.valueOf(lat) + "&lon=" + String.valueOf(lon) + "&cnt=36&units=imperial&appid=" + API_KEY; //TODO CHANGE TO 96
-
-        final JSONObject[] jsonObj = new JSONObject[1];
+        String url = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&cnt=36&units=imperial&appid=" + API_KEY; //TODO CHANGE TO 96
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 Log.i("api2", response.toString());
-                jsonObj[0] = response;
+                if (alertsArray == null) {return;}
+                for (int i = 0; i < alertsArray.size(); i++) {
+                    Log.i("test","test");
+                    try {
+                        double v;
+                        switch (alertsArray.get(i).getWeatherCond()) {
+                            case "temp":
+                                v = response.getJSONObject("main").getDouble("temp");
+                                if (alertsArray.get(i).checkTestValue(v)) {
+                                    createNotification("weatherAlert", alertsArray.get(i).toString(), R.drawable.notification_icon, R.drawable.notification_icon);
+                                }
+                                break;
+                            case "feelsLike":
+                                v = response.getJSONObject("main").getDouble("feels_like");
+                                if (alertsArray.get(i).checkTestValue(v)) {
+                                    createNotification("weatherAlert", alertsArray.get(i).toString(), R.drawable.notification_icon, R.drawable.notification_icon);
+                                }
+                                break;
+                            case "humidity":
+                                v = response.getJSONObject("main").getDouble("humidity");
+                                if (alertsArray.get(i).checkTestValue(v)) {
+                                    createNotification("weatherAlert", alertsArray.get(i).toString(), R.drawable.notification_icon, R.drawable.notification_icon);
+                                }
+                                break;
+                            case "windSpeed":
+                                v = response.getJSONObject("wind").getDouble("speed");
+                                if (alertsArray.get(i).checkTestValue(v)) {
+                                    createNotification("weatherAlert", alertsArray.get(i).toString(), R.drawable.notification_icon, R.drawable.notification_icon);
+                                }
+                                break;
+                        }
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }, new Response.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("api", error.toString());
-                jsonObj[0] = null;
+                return;
             }
         });
 
         // Access the RequestQueue through our singleton class.
         RequestSingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
-
-        if (jsonObj[0] == null) { return; }
-
-        for (int i = 0; i < alertsArray.size(); i++) {
-            Log.i("test","test");
-
-            switch (alertsArray.get(i).getWeatherCond()) {
-                case "temp":
-                   // int currentTemp = jsonObj[0].getJSONObect("main").
-                    break;
-                case "feelsLike":
-                    break;
-                case "humidity":
-                    break;
-                case "windSpeed":
-                    break;
-            }
-        }
     }
 
     /**
@@ -381,10 +438,18 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     @Override
     public void onLocationChanged(@NonNull Location location) {
         myLocation = location;
-        sharedPreferences.edit()
-                .putFloat(LAT_KEY, (float) location.getLatitude())
-                .putFloat(LON_KEY, (float) location.getLongitude())
-                .apply();
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        try {
+            List<Address> addressList = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+            sharedPreferences.edit()
+                    .putString(CITY_KEY, addressList.get(0).getLocality())
+                    .putString(STATE_KEY, String.valueOf(addressList.get(0).getAdminArea()))
+                    .putFloat(LAT_KEY, (float) location.getLatitude())
+                    .putFloat(LOG_KEY, (float) location.getLongitude())
+                    .apply();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
