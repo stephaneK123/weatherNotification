@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         alertsArray = gson.fromJson(json, new TypeToken<List<AlertObject>>() {}.getType()); //very strange but works
 
         //addAlert("temp","gt", 20); //TODO sample add alert, should be removed
+        Log.i("fuck", "shit");
 
         updateApiData();
 
