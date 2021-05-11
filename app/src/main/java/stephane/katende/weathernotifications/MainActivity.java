@@ -63,7 +63,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import stephane.katende.weathernotifications.Forcast.ForecastViewHelper;
 import stephane.katende.weathernotifications.Startup.AlertObject;
 import stephane.katende.weathernotifications.Startup.RequestSingleton;
 
@@ -90,9 +89,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     JSONObject apiResponse;
     ArrayList<AlertObject> alertsArray;
-
-    ArrayList<String> dayOne, dayTwo, dayThree, dayFour;
-    ArrayList<ForecastViewHelper> _myArrayForecast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -380,215 +376,13 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         if (response == null) {
             //fill all slots with '0' - I'm unsure about how to actually get the strings into his textviews.
         } else {
-            doSomeMagic();//set up recycler view
+            //fill the slot with the data currently listed in the JSONObject - Need to figure out something with this
             JSONArray array = response.getJSONArray("list");
+            String temp = array.getJSONObject(0).getJSONObject("main").getString("temp");
+            
 
-            /*** DAY ONE **/
-            for (int i = 0; i <= 23; i += 2) { //format   current temp, date, highlow, temp, feelsLike, condition, wind, humidity  only first pos had HEADER!
-
-                JSONArray weatherArray = array.getJSONObject(i).getJSONArray("weather");
-                JSONObject windsArray = response.getJSONArray("list").getJSONObject(i).getJSONObject("wind");
-
-                if (i == 0) {//do headers
-                    //            getting all the headers stuff current temp, date, highlow
-                    dayOne.add(array.getJSONObject(i).getJSONObject("main").getString("temp"));
-                    dayOne.add(array.getJSONObject(i).getString("dt_txt"));
-                    dayOne.add(array.getJSONObject(i).getJSONObject("main").getString("temp_max") + "/" + array.getJSONObject(i).getJSONObject("main").getString("temp_min"));
-                }
-
-                //content  temp, feelsLike, condiction, wind, humidity
-                dayOne.add(array.getJSONObject(i).getJSONObject("main").getString("temp"));
-                dayOne.add(array.getJSONObject(i).getJSONObject("main").getString("feels_like"));
-                dayOne.add(weatherArray.getJSONObject(i).getString("main"));
-                dayOne.add(windsArray.getString("speed") + "mph");
-                dayOne.add(array.getJSONObject(i).getJSONObject("main").getString("humidity"));
-
-            }
-
-            /*** DAY TWO **/
-            for (int i = 24; i <= 47; i += 2) { //format   current temp, date, highlow, temp, feelsLike, condition, wind, humidity  only first pos had HEADER!
-                JSONArray weatherArray = array.getJSONObject(i).getJSONArray("weather");
-                JSONObject windsArray = response.getJSONArray("list").getJSONObject(i).getJSONObject("wind");
-
-                if (i == 24) {//do headers
-                    //            getting all the headers stuff current temp, date, highlow
-                    dayTwo.add(array.getJSONObject(i).getJSONObject("main").getString("temp"));
-                    dayTwo.add(array.getJSONObject(i).getString("dt_txt"));
-                    dayTwo.add(array.getJSONObject(i).getJSONObject("main").getString("temp_max") + "/" + array.getJSONObject(i).getJSONObject("main").getString("temp_min"));
-                }
-
-                //content  temp, feelsLike, condiction, wind, humidity
-                dayTwo.add(array.getJSONObject(i).getJSONObject("main").getString("temp"));
-                dayTwo.add(array.getJSONObject(i).getJSONObject("main").getString("feels_like"));
-                dayTwo.add(weatherArray.getJSONObject(i).getString("main"));
-                dayTwo.add(windsArray.getString("speed") + "mph");
-                dayOne.add(array.getJSONObject(i).getJSONObject("main").getString("humidity"));
-
-            }
-
-            /*** DAY THREE **/
-            for (int i = 48; i <= 71; i += 2) { //format   current temp, date, highlow, temp, feelsLike, condition, wind, humidity  only first pos had HEADER!
-                JSONArray weatherArray = array.getJSONObject(i).getJSONArray("weather");
-                JSONObject windsArray = response.getJSONArray("list").getJSONObject(i).getJSONObject("wind");
-
-                if (i == 48) {//do headers
-                    //            getting all the headers stuff current temp, date, highlow
-                    dayThree.add(array.getJSONObject(i).getJSONObject("main").getString("temp"));
-                    dayThree.add(array.getJSONObject(i).getString("dt_txt"));
-                    dayThree.add(array.getJSONObject(i).getJSONObject("main").getString("temp_max") + "/" + array.getJSONObject(i).getJSONObject("main").getString("temp_min"));
-                }
-
-                //content  temp, feelsLike, condiction, wind, humidity
-                dayThree.add(array.getJSONObject(i).getJSONObject("main").getString("temp"));
-                dayThree.add(array.getJSONObject(i).getJSONObject("main").getString("feels_like"));
-                dayThree.add(weatherArray.getJSONObject(i).getString("main"));
-                dayThree.add(windsArray.getString("speed") + "mph");
-                dayThree.add(array.getJSONObject(i).getJSONObject("main").getString("humidity"));
-
-            }
-
-            /*** DAY FOUR **/
-            for (int i = 72; i <= 95; i += 2) { //format   current temp, date, highlow, temp, feelsLike, condition, wind, humidity  only first pos had HEADER!
-                JSONArray weatherArray = array.getJSONObject(i).getJSONArray("weather");
-                JSONObject windsArray = response.getJSONArray("list").getJSONObject(i).getJSONObject("wind");
-
-                if (i == 72) {//do headers
-                    //            getting all the headers stuff current temp, date, highlow
-                    dayFour.add(array.getJSONObject(i).getJSONObject("main").getString("temp"));
-                    dayFour.add(array.getJSONObject(i).getString("dt_txt"));
-                    dayFour.add(array.getJSONObject(i).getJSONObject("main").getString("temp_max") + "/" + array.getJSONObject(i).getJSONObject("main").getString("temp_min"));
-                }
-
-                //content  temp, feelsLike, condiction, wind, humidity
-                dayFour.add(array.getJSONObject(i).getJSONObject("main").getString("temp"));
-                dayFour.add(array.getJSONObject(i).getJSONObject("main").getString("feels_like"));
-                dayFour.add(weatherArray.getJSONObject(i).getString("main"));
-                dayFour.add(windsArray.getString("speed") + "mph");
-                dayFour.add(array.getJSONObject(i).getJSONObject("main").getString("humidity"));
-
-            }
         }
     }
-
-    private void doSomeMagic() {
-        _myArrayForecast = new ArrayList<>();
-        //grab each "day"
-        ForecastViewHelper dayOne = new ForecastViewHelper();
-        ForecastViewHelper dayTwo = new ForecastViewHelper();
-        ForecastViewHelper dayThree = new ForecastViewHelper();
-        ForecastViewHelper dayFour = new ForecastViewHelper();
-
-        //add them to the array
-        _myArrayForecast.add(dayOne);
-        _myArrayForecast.add(dayTwo);
-        _myArrayForecast.add(dayThree);
-        _myArrayForecast.add(dayFour);
-
-        /*** DAY 1 ***/
-
-        ForecastViewHelper.Headers x = dayOne.get_myHeaders();//headers
-        x.setCurrentTemp("56");
-        x.setDate("Monday, April 24 2021");
-        x.setHighLow("65/45");
-
-
-        ForecastViewHelper.FirstRow one = dayOne.get_myFirstRow();
-        one.setTemp("45");
-        one.setFeelsLike("55");
-        one.setCondition("Rainy");
-        one.setWind("10 mph");
-        one.setHumidity("55%");
-
-        ForecastViewHelper.SecondRow two = dayOne.get_mySecondRow();
-        two.setTemp("45");
-        two.setFeelsLike("55");
-        two.setCondition("Rainy");
-        two.setWind("10 mph");
-        two.setHumidity("55%");
-
-        ForecastViewHelper.ThirdRow three = dayOne.get_myThirdRow();
-        three.setTemp("45");
-        three.setFeelsLike("55");
-        three.setCondition("Rainy");
-        three.setWind("10 mph");
-        three.setHumidity("55%");
-
-        ForecastViewHelper.FourthRow four = dayOne.get_myFourthRow();
-        four.setTemp("45");
-        four.setFeelsLike("55");
-        four.setCondition("Rainy");
-        four.setWind("10 mph");
-        four.setHumidity("55%");
-
-        ForecastViewHelper.FifthRow five = dayOne.get_myFifthRow();
-        five.setTemp("45");
-        five.setFeelsLike("55");
-        five.setCondition("Rainy");
-        five.setWind("10 mph");
-        five.setHumidity("55%");
-
-        ForecastViewHelper.SixthRow six = dayOne.get_mySixthRow();
-        six.setTemp("45");
-        six.setFeelsLike("55");
-        six.setCondition("Rainy");
-        six.setWind("10 mph");
-        six.setHumidity("55%");
-
-        ForecastViewHelper.SeventhRow seven = dayOne.get_mySeventhRow();
-        seven.setTemp("45");
-        seven.setFeelsLike("55");
-        seven.setCondition("Rainy");
-        seven.setWind("10 mph");
-        seven.setHumidity("55%");
-
-        ForecastViewHelper.EighthRow eight = dayOne.get_myEightRow();
-        eight.setTemp("45");
-        eight.setFeelsLike("55");
-        eight.setCondition("Rainy");
-        eight.setWind("10 mph");
-        eight.setHumidity("55%");
-
-        ForecastViewHelper.NinthRow nine = dayOne.get_myNinthRow();
-        nine.setTemp("45");
-        nine.setFeelsLike("55");
-        nine.setCondition("Rainy");
-        nine.setWind("10 mph");
-        nine.setHumidity("55%");
-
-
-        ForecastViewHelper.TenthRow ten = dayOne.get_myTenthRow();
-        ten.setTemp("45");
-        ten.setFeelsLike("55");
-        ten.setCondition("Rainy");
-        ten.setWind("10 mph");
-        ten.setHumidity("55%");
-
-
-        ForecastViewHelper.EleventhRow eleven = dayOne.get_myEleventhRow();
-        eleven.setTemp("45");
-        eleven.setFeelsLike("55");
-        eleven.setCondition("Rainy");
-        eleven.setWind("10 mph");
-        eleven.setHumidity("55%");
-
-
-        ForecastViewHelper.TwelfthRow twelve = dayOne.get_myTwelfthRow();
-        twelve.setTemp("45");
-        twelve.setFeelsLike("55");
-        twelve.setCondition("Rainy");
-        twelve.setWind("10 mph");
-        twelve.setHumidity("55%");
-
-        /*** DAY 2 ***/
-
-        /*** DAY 3 ***/
-
-
-        /*** DAY 4 ***/
-
-
-    }
-
 
 
 
